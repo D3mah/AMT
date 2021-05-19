@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+	<meta name="sputnik-verification" content="sBbYU3UY2a1qoBmG" />
+	<meta name="yandex-verification" content="237a1583a96d373d" />
 	<script>
 	// Функция обработки lightbox для всех изображений
 	(function ($) {
@@ -15,6 +17,29 @@
 		}); 
 	})(jQuery);
 	</script>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(50259871, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50259871" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YH3PKTSRKZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YH3PKTSRKZ');
+</script>
 </head>
 <body class="theme">
 	<!-- Start full-page -->
@@ -25,7 +50,7 @@
 			<div class="uk-container">
 				<div uk-navbar>
 					<div class="uk-navbar-right">
-						<a href="/priem-dir" target="_blank" class="priem-dir"><i class="fas fa-ticket-alt"></i>Приемная директора</a>
+						<a href="https://приемная.алмт.рф" target="_blank" class="priem-dir"><i class="fas fa-ticket-alt"></i>Приемная директора</a>
 						<?php echo do_shortcode( '[bvi text="Версия для слабовидящих"]' ); ?>
 						<div class="box-switch" uk-tooltip="title: Темная тема; pos: bottom"><div class="switch far fa-moon"></div></div>
 					</div>
@@ -47,8 +72,8 @@
 						<!-- End uk-logo -->
 						<!-- Start namesite -->
 						<div class="namesite">
-							<p class="description"><a href="<?php echo get_home_url(); ?>"><?php bloginfo( 'description' ); ?></a></p>
-							<h1 class="name"><a href="<?php echo get_home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+							<p class="description"><?php bloginfo( 'description' ); ?></p>
+							<h1 class="name"><?php bloginfo( 'name' ); ?></h1>
 						</div>
 						<!-- End namesite -->
 					</div>
