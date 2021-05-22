@@ -8,5 +8,22 @@
     <?php wp_head(); ?>
 
 </head>
-<body>
+<body class="addtheme">
+ <!-- Start header -->
+ <header>
+    <div class="uk-container">
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <div class="uk-logo logo" uk-tooltip="title: <?php bloginfo('name'); ?>; pos: bottom"><?php the_custom_logo( $blog_id = 0 ); ?></div>
+                </div>
+                <div class="uk-navbar-right">
+                    <a href="#" target="_blank" class="r-info">Корпус</a>
+                    <a href="#" target="_blank" class="r-info">Главный корпус</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+ </header>
+ <!-- End header -->
 

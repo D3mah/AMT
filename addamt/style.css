@@ -12,3 +12,50 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: help-theme amt material
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
 */
+
+header {
+    background-color: #009ee0;
+    padding: 10px 0px;
+}
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #009ee0;
+}
+.logo {
+    block-size: 60px;
+    height: 60px;
+    inline-size: 60px;
+    width: 60px;
+    transition: 0.25s ease;
+}
+a .r-info {
+    text-decoration: none;
+
+}
+.r-info {
+    border-radius: 2px;
+    background-color: #057fb3;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0px 5px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+.r-info:hover, .r-info:focus {
+    border-right: 2px;
+    background-color: #045c82;
+}
+a.r-info:hover, .r-info:focus {
+    text-decoration: none;
+    color: #fff;
+}
+.name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0px;
+    padding: 15px 20px;
+}
+.far, .fas {
+    margin-inline-end: 5px;
+    margin-right: 5px;
+}
