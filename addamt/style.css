@@ -1,18 +1,23 @@
 /*
-Theme Name: AMT-THEME Material UI
+Theme Name: Amt-theme
 Theme URI: https://vk.com/d3ma_k
 Author: Dmitriy Kolmakov
 Author URI: https://vk.com/d3ma_k
-Description: last update 19.05.2021
+Description: last update 21.07.2021
 Requires at least: 4.9.6
-Requires PHP: 7.3
-Version: 0.1
+Requires PHP: 7.0
+Version: 0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: help-theme amt material
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
 */
-
+html {
+    background-color: #e8e8e8;
+}
+body {
+    background-color: #e8e8e8;
+}
 header {
     background-color: #009ee0;
     padding: 10px 0px;
@@ -27,27 +32,6 @@ header {
     width: 60px;
     transition: 0.25s ease;
 }
-a .r-info {
-    text-decoration: none;
-
-}
-.r-info {
-    border-radius: 2px;
-    background-color: #057fb3;
-    color: #fff;
-    padding: 10px 15px;
-    margin: 0px 5px;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-}
-.r-info:hover, .r-info:focus {
-    border-right: 2px;
-    background-color: #045c82;
-}
-a.r-info:hover, .r-info:focus {
-    text-decoration: none;
-    color: #fff;
-}
 .name {
     color: #fff;
     font-weight: bold;
@@ -59,3 +43,83 @@ a.r-info:hover, .r-info:focus {
     margin-inline-end: 5px;
     margin-right: 5px;
 }
+.info {
+    color: #fff;
+    transition: 0.25s ease;
+}
+.info:hover {
+    color: #613d3d;
+}
+.info svg {
+    block-size: 30px;
+    inline-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+.radius {
+    border-radius: 2px;
+}
+.important > .important-block {
+    margin: 20px 0px 20px 0px;
+}
+.up_title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.imp_news:hover {
+    text-decoration: none;
+}
+.no-news {
+    text-align: center;
+    border-radius: 2px;
+}
+.news_title {
+    text-transform: uppercase;
+    text-align: center;
+}
+.imp_news:hover >.news_title:hover, .news_title:focus {
+    color: #fff;
+}
+/**/
+.uk-card-default:hover, .uk-card-default:focus {
+    background-color: #009ee0!important;
+    transition: 0.25s ease;
+}
+/**/
+/* Начало Кастомизации слайдера */
+.nav-slider a {
+    z-index: 1;
+    margin: 0;
+    transform: translateY(-50%) translateY(-37px)!important;
+    padding: 0;
+    transition: 0.25s ease;
+}
+.nav-slider .uk-position-center-left {
+    left: auto;
+    right: 35px;
+    border: 1px solid #009ee0;
+    padding: 5px 4px;
+    transition: 0.25s ease;
+    border-radius: 2px;
+    color: #009ee0;
+}
+.nav-slider .uk-position-center-right {
+    border: 1px solid #009ee0;
+    padding: 5px 4px;
+    transition: 0.25s ease;
+    border-radius: 2px;
+    color: #009ee0;
+}
+.nav-slider .uk-position-center-left svg, .nav-slider .uk-position-center-right svg{
+    inline-size: 18px;
+    width: 18px;
+    block-size: 18px;
+    height: 18px;
+}
+.nav-slider .uk-position-center-right:hover , .nav-slider .uk-position-center-left:hover, .nav-slider .uk-position-center-right:focus,
+.nav-slider .uk-position-center-left:focus
+{
+    background-color: #009ee0;
+    color: #fff;
+}
+/* Конец Кастомизации слайдера */

@@ -18,8 +18,7 @@
                     <div class="uk-logo logo" uk-tooltip="title: <?php bloginfo('name'); ?>; pos: bottom"><?php the_custom_logo( $blog_id = 0 ); ?></div>
                 </div>
                 <div class="uk-navbar-right">
-                    <a href="#" target="_blank" class="r-info">Корпус</a>
-                    <a href="#" target="_blank" class="r-info">Главный корпус</a>
+                    <a href="#" class="info" uk-icon="info" uk-tooltip="title: Информация; pos: bottom"></a>
                 </div>
             </nav>
         </div>
