@@ -38,6 +38,15 @@ function menu() {
 
 function sidebars() {
     register_sidebar(array(
+        'name' => 'Кнопки',
+        'id' => "buttons",
+        'description' => 'Блок для кнопок на главной странице сайта',
+        'before_widget' => null,
+        'after_widget' => null,
+        'before_title' => null,
+        'after_title' => null
+    ));
+    register_sidebar(array(
         'name' => 'Важная информация',
         'id' => "important",
         'description' => 'Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',

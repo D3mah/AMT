@@ -7,8 +7,13 @@
     <div uk-grid>
         <div class="uk-width-1-1">
             <div class="uk-section">
+                <div class="uk-container">
+                    <?php dynamic_sidebar('buttons'); ?>
+                </div>
+            </div>
+            <div class="uk-section">
                 <div class="uk-container uk-animation" tabindex="0">
-                    <div uk-slider="autoplay:true; autoplay-interval:12000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;" class="uk-animation-slide-right">
+                    <div uk-slider="autoplay:true; autoplay-interval:32000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;" class="uk-animation-slide-right">
                         <h3 class="up_title"><?php echo get_cat_name(11) ?></h3>
                         <div class="uk-position-relative uk-light nav-slider">
                             <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
@@ -22,7 +27,7 @@
                                     <a href="<?php the_permalink(); ?>" class="imp_news">
                                         <div class="uk-card uk-card-default uk-card-hover radius">
                                             <div class="uk-card-body">
-                                                <h3 class="uk-card-title news_title"><?php the_title(); ?></h3>
+                                                <h4 class="news_title"><?php the_title(); ?></h4>
                                             </div>
                                         </div>
                                     </a>
@@ -33,12 +38,10 @@
                                 <div class="uk-card uk-card-default uk-card-body no-news">
                                     <p>Новостей еще нет</p>
                                 </div>
-
                             <?php endif; ?>
-
                         </ul>
-
                     </div>
+                    <hr>
                 </div>
             </div>
         </div>

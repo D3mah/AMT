@@ -80,12 +80,42 @@ header {
 .imp_news:hover >.news_title:hover, .news_title:focus {
     color: #fff;
 }
-/**/
+/* Переопредление стиля фреймворка */
 .uk-card-default:hover, .uk-card-default:focus {
     background-color: #009ee0!important;
     transition: 0.25s ease;
 }
-/**/
+/* Конец */
+
+/* Начало Настройки кнопок */
+.wp-block-button__link {
+    border-radius: 6px;
+    transition: 0.25s ease;
+    text-transform: uppercase;
+}
+.is-style-outline>.wp-block-button__link, .wp-block-button__link.is-style-outline {
+    border: 2px solid #009ee0;
+    transition: 0.25s ease;
+}
+.is-style-outline>.wp-block-button__link:hover, .wp-block-button__link.is-style-outline:hover {
+    background-color: #009ee0;
+    color: #fff;
+    padding: 20px 0px;
+}
+.wp-block-button__link:hover, .wp-block-button__link:focus {
+    text-decoration: none;
+}
+.wp-block-button__link {
+    background-color: #009ee0;
+    color: #fff;
+    transition: 0.25s ease;
+}
+.wp-block-button__link:hover, .wp-block-button__link:focus {
+    background-color: #035472;
+    color: #fff;
+}
+/* Конец Настройки кнопок */
+
 /* Начало Кастомизации слайдера */
 .nav-slider a {
     z-index: 1;
@@ -123,3 +153,6 @@ header {
     color: #fff;
 }
 /* Конец Кастомизации слайдера */
+.wp-block-button {
+    margin: 10px 0px;
+}
