@@ -8,5 +8,21 @@
     <?php wp_head(); ?>
 
 </head>
-<body>
+<body class="addtheme">
+ <!-- Start header -->
+ <header>
+    <div class="uk-container">
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <div class="uk-logo logo" uk-tooltip="title: <?php bloginfo('name'); ?>; pos: bottom"><?php the_custom_logo( $blog_id = 0 ); ?></div>
+                </div>
+                <div class="uk-navbar-right">
+                    <a href="#" class="info" uk-icon="info" uk-tooltip="title: Информация; pos: bottom"></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+ </header>
+ <!-- End header -->
 
