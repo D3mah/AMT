@@ -48,26 +48,31 @@
 		<div class="b-visual">
 			<!-- Start uk-container -->
 			<div class="uk-container">
-				<div uk-navbar>
+				<nav uk-navbar="mode: click">
 					<div class="uk-navbar-left">
-						<ul class="uk-navbar-nav">
-							<li uk-drop="mode: click">
-								<a href="#">Test</a>
-								<div class="uk-navbar-dropdown">
-									<ul class="uk-nav uk-navbar-dropdown-nav">
-										<li class="uk-active"><a href="#">Active</a></li>
-										<li><a href="#">Item</a></li>
-										<li><a href="#">Item</a></li>
-									</ul>
-								</div>
-							</li>
-						</ul>
+
+
+                            <ul class="uk-navbar-nav">
+                                <li>
+                                    <a href="#">Parent</a>
+                                    <div class="uk-navbar-dropdown">
+                                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                                            <li class="uk-active"><a href="#">Active</a></li>
+                                            <li><a href="#">Item</a></li>
+                                            <li><a href="#">Item</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+
 					</div>
 					<div class="uk-navbar-right">
 						<?php echo do_shortcode( '[bvi text="Версия для слабовидящих"]' ); ?>
 						<div class="box-switch" uk-tooltip="title: Темная тема; pos: bottom"><div class="switch far fa-moon"></div></div>
 					</div>
-				</div>
+				</nav>
 			</div>
 			<!-- End uk-container -->
 		</div>
