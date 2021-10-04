@@ -1,10 +1,17 @@
 ﻿/*   
 Theme Name: AMT
-Theme URI: https://vk.com/d3ma_k
-Description: Шаблон для образовательных сайтов. Последнее обновление 18.04.2021. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
+Theme URI: vk.com/d3ma_k
 Author: Dmitriy Kolmakov
-Author URI: https://vk.com/d3ma_k
-Version: 2.5
+Author URI: vk.com/d3ma_k
+Description: Шаблон для образовательных сайтов. Последнее обновление 18.04.2021. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
+Version: 2.8
+License: GNU General Public License v2 or later
+License URI: www.gnu.org/licenses/gpl-2.0.html
+Tags: amt, edu
+Text Domain: AMT
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
 */
 
 body {
@@ -107,7 +114,7 @@ body {
 	--news-footer: #009ee0;
 	--news-body: #fbfbfb;
 	--date-news: #009ee0;
-	--button-news: #1b7b98;
+	--button-news: #1e87f0;
 	--button-news-hover: #057fb3;
 	--nav-slider: #848484;
 	--nav-button: #848484;
@@ -734,12 +741,30 @@ footer .current_page_item {
 }
 .breadcrumbs {
 	padding: 10px;
-	text-transform: uppercase;
 	background-color: var(--block);
-	margin-block-start: 20px;
 	font-family: 'Open Sans Condensed Light', sans-serif;
-	font-size: 12px;
+	font-size: 0.9rem;
 	border-radius: 2px;
+	font-weight: bold;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+}
+.breadcrumbs i {
+	display: flex; 
+	align-items: center;
+	margin: 0px 7px;
+}
+.breadcrumbs__page {
+	display: flex;
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	color: var(--text-menu);
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	border-radius: 2px;
+	background-color: #0e0e0eab;
 }
 .page .uk-section {
 	padding-block-start: 20px;
@@ -751,7 +776,7 @@ footer .current_page_item {
 	background-color: var(--block);
 	border-radius: 2px;
 	color: var(--page-content)!important;
-	padding: 10px;
+	padding: 40px 10px;
 	margin: 0;
 }
 .p-bottom {
@@ -881,8 +906,7 @@ span.post-date {
 	top: -9999px;
 }
 
-.print, .copy {
-	padding: 20px 10px;
+.print, .backsite {
 	background-color: var(--help-b);
 	transition: 0.25s ease;
 	text-transform: uppercase;
@@ -892,29 +916,37 @@ span.post-date {
 	font-family: 'Roboto Condensed Regular', sans-serif;
 }
 .print {
-	border-radius: 2px 0px 0px 0px;
+	padding: 20px 10px;
 }
-.copy {
-	border-radius: 0px 2px 0px 0px;
-}
-.copy:hover, .copy:focus {
+.backsite:hover {
 	background-color: var(--copy-hover);
-	border-radius: 0px 2px 0px 0px;
 }
 .print:hover, .print:focus {
 	background-color: var(--print-hover);
-	border-radius: 2px 0px 0px 0px;
+}
+.link-backsite {
+	padding: 20px 10px;
+	color: var(--text-menu);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.25s ease;
+}
+.link-backsite:hover {
+	text-decoration: none;
+	color: var(--text-menu);
 }
 .post-title {
 	color: var(--text-menu);
 	text-transform: uppercase;
 	font-family: 'Roboto Condensed Bold', sans-serif;
-	font-size: 36px;
-	padding: 10px;
-	text-align: center;
+	position: absolute;
+    z-index: inherit;
+    bottom: 40px;
+    left: 30px;
 }
 .bg-color {
-	background-color: #000;
+	background-color: transparent;
 }
 .post-top {
 	padding-block-start: 20px!important;
@@ -925,24 +957,26 @@ span.post-date {
 .post-content {
 	padding: 20px;
 }
-.uk-card-badge-post-date {
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	z-index: inherit;
+.uk-card-badge-post-date, .uk-card-badge-post-views {
+    position: absolute;
+    z-index: inherit;
+    bottom: 40px;
+    font-size: 12px;
 }
-.uk-card-badge-post-views {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	z-index: inherit;
+.uk-card-badge-post-date
+{
+	left: 30px
+}
+.uk-card-badge-post-views
+{
+	left: 125px;
 }
 .p-block {
 	padding: 20px;
 }
 .post-title-aside {
- text-transform: uppercase;
- font-size: 36px;
+	text-transform: uppercase;
+	font-size: 36px;
 }
 .no-news {
 	background-color: var(--block);
@@ -954,6 +988,10 @@ span.post-date {
 .uk-card-badge {
 	top: 20px;
 	right: 20px;
+}
+.uk-card-badge-index {
+	left: 20px;
+	right: auto;
 }
 .load-more {
 	background-color: #000;
@@ -1069,7 +1107,18 @@ span.post-date {
 	color: var(--text-menu);
 	background-color: var(--bg-canvas);
 }
-
+.btnClip {
+    cursor: pointer;
+    width: 100%;
+    inline-size: 100%;
+    padding: 15px 0px;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s ease;
+}
+.btnClip:hover, .btnClip:focus {
+    background-color: #bfd9f7;
+    cursor: pointer;
+}
 .no_dec {
 	text-decoration: none!important;
 }
@@ -1135,6 +1184,9 @@ span.post-date {
 /* .uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
 	padding: 0px 0px 0px 15px;
 } */
+.dataTables_filter label #text {
+display: none;
+}
 .wp-block-embed iframe {
 	min-inline-size: 100%;
 }
@@ -1165,29 +1217,10 @@ span.post-date {
 	padding: 15px 20px;
 }
 /* End up-down */
-/* Start Table */
-.dataTables_wrapper {
-	color: var(--table-text)!important;
-	font-size: 14px!important;
-}
-.tablepress {
-	font-size: 14px!important;
-}
-.dataTables_wrapper th, .tablepress thead th {
-	background-color: var(--head-table)!important;
-}
-.tablepress .even td, .tablepress .odd td {
-	background-color: var(--body-table)!important;
-}
-.tablepress .row-hover tr:hover td {
-	background-color: var(--table-hover)!important;
-}
-.tablepress tbody td, .tablepress tfoot th {
-	/* border-top: 1px solid rgb(20, 20, 20)!important; */
-}
-/* End Table */
+
 
 /* Начало Анимированное меню для маленьких устройств */
+
 .m-menu {
 	font-size: 26px;
 	font-weight: bold;
@@ -1201,10 +1234,10 @@ span.post-date {
 	width: 28px;
 	block-size: 28px;
 	height: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
 	transition: transform 330ms ease-out;
 }
 .line-menu {
@@ -1247,117 +1280,125 @@ span.post-date {
 
 
 /* Переопределение стилей версии для слабовидящих */
-html body a.bvi-link-widget, html body a.bvi-link-shortcode {
+.bvi-open {
 	padding: 0!important;
-	background-color: transparent;
-	font-weight: 500;
-	transition: 0.25s ease;
+	background-color: transparent!important;
+	font-weight: 500!important;
+	transition: 0.25s ease!important;
 	color: var(--text-news)!important;
-	padding: 13px 10px!important;
+	padding: 15px 10px!important;
 	background-color: var(--sub-menu)!important;
 	border-radius: 0px!important;
 }   
-html body a.bvi-link-widget, html body a.bvi-link-shortcode:hover,
-html body a.bvi-link-widget, html body a.bvi-link-shortcode:focus {
+.bvi-open:hover, .bvi-open:focus {
 	background-color: var(--bg-canvas)!important;
 }
-
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .menu,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) header,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .b-visual,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .sub-menu,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .slider,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .slider .n2-ss-item-content,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .c-icon,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .u-card-s,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .cardtheme,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .all_info,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .page-numbers,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .widget,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .aside__button,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) #top-link,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .breadcrumbs,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .help-button,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .page_content,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .post-l,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .ya-share2__badge,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .widget_recent_entries ul,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .copyright
+.bvi-shortcode {
+ background-color: transparent!important;	
+}
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .menu,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) header,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .b-visual,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .sub-menu,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .slider,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .slider .n2-ss-item-content,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .c-icon,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .u-card-s,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .cardtheme,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .all_info,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .page-numbers,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .widget,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .aside__button,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) #top-link,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .breadcrumbs,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .help-button,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .page_content,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .post-l,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .ya-share2__badge,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .widget_recent_entries ul,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .copyright
 {
 	border: 1px solid black!important;
 }
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .menu,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) header,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .b-visual,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .sub-menu,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .slider,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .slider .n2-ss-item-content,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .c-icon,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .u-card-s,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .cardtheme,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .all_info,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .page-numbers,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .widget,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .aside__button,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) #top-link,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .breadcrumbs,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .help-button,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .page_content,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .post-l,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .ya-share2__badge,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .b-news,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .widget_recent_entries ul,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .copyright
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .menu,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) header,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .b-visual,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .sub-menu,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .slider,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .slider .n2-ss-item-content,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .c-icon,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .u-card-s,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .cardtheme,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .all_info,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .page-numbers,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .widget,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .aside__button,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) #top-link,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .breadcrumbs,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .help-button,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .page_content,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .post-l,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .ya-share2__badge,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .b-news,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .widget_recent_entries ul,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .copyright
 {
 	border: 1px solid black!important;
 }
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .menu,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) header,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .b-visual,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .sub-menu,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .slider,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .slider .n2-ss-item-content,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .c-icon,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .u-card-s,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .cardtheme,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .all_info,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .page-numbers,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .widget,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .aside__button,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) #top-link,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .breadcrumbs,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .help-button,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .page_content,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .post-l,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .ya-share2__badge,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .b-news,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .widget_recent_entries ul,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .copyright
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .menu,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) header,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .b-visual,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .sub-menu,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .slider,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .slider .n2-ss-item-content,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .c-icon,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .u-card-s,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .cardtheme,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .all_info,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .page-numbers,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .widget,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .aside__button,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) #top-link,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .breadcrumbs,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .help-button,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .page_content,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .post-l,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .ya-share2__badge,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .b-news,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .widget_recent_entries ul,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .copyright
 {
 	border: 1px solid black!important;
 }
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .logo,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .logo,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .logo {
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .logo,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .logo,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .logo {
 	display: none;
 }
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .b-visual,
-html body .bvi-body[data-bvi-letter-spacing=normal] *:not(.bvi-link) .b-visual .uk-navbar,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .b-visual,
-html body .bvi-body[data-bvi-letter-spacing=average] *:not(.bvi-link) .b-visual .uk-navbar,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .b-visual,
-html body .bvi-body[data-bvi-letter-spacing=big] *:not(.bvi-link) .b-visual .uk-navbar
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .b-visual,
+html body .bvi-body[data-bvi-letterspacing=normal] *:not(.bvi-link) .b-visual .uk-navbar,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .b-visual,
+html body .bvi-body[data-bvi-letterspacing=average] *:not(.bvi-link) .b-visual .uk-navbar,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .b-visual,
+html body .bvi-body[data-bvi-letterspacing=big] *:not(.bvi-link) .b-visual .uk-navbar
 {
-	margin-bottom: 10px;
-	margin-block-end: 10px;
+	margin-bottom: 10px!important;
+	margin-block-end: 10px!important;
 }
-html body .bvi-body[data-bvi-letter-spacing="normal"] :not(.bvi-link) .b-news, 
-html body .bvi-body[data-bvi-letter-spacing="normal"] :not(.bvi-link) .uk-slider li {
+html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .b-news, 
+html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .uk-slider li {
 	outline: 1px solid black;
 }
-.bvi-link-shortcode .fa-eye {
+.bvi-shortcode .bvi-svg-eye {
+	font-size: 1.3em!important;
 	margin-inline-end: 10px;
 	margin-right: 10px;
+}
+.bvi-widget, .bvi-shortcode a, .bvi-widget a, .bvi-shortcode {
+	text-decoration: none!important;
+}
+.bvi-shortcode a:hover, .bvi-shortcode a:focus {
+	background-color: var(--bg-canvas)!important;
 }
 /* Конец переопределения */
 /* Начало Адаптация версия для слабовидящих */

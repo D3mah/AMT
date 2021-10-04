@@ -31,12 +31,13 @@ function style() {
 function scripts() {
 	wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/assets/js/loadmore.js', array('jquery') );
 	wp_enqueue_script( 'updown', get_stylesheet_directory_uri() . '/assets/js/up-down.js', array('jquery') );
+	wp_enqueue_script ('jqery', get_template_directory_uri() .'/assets/js/jquery-3.5.1.min.js');
 }
 function script() {
 	wp_enqueue_script ('uikit', get_template_directory_uri() .'/assets/js/uikit.min.js');
 	wp_enqueue_script ('uikit-icon', get_template_directory_uri() .'/assets/js/uikit-icons.min.js');
 	wp_enqueue_script ('fontawesome', 'https://kit.fontawesome.com/8cea7a5a56.js');
-	wp_enqueue_script ('jqery', get_template_directory_uri() .'/assets/js/jquery-3.5.1.min.js');
+	wp_enqueue_script ('clips', get_template_directory_uri() .'/assets/js/clipboard.min.js');
 	wp_enqueue_script ('script', get_template_directory_uri() .'/assets/js/script.js');
 }
 function menu() {
@@ -57,6 +58,15 @@ function sidebars() {
 		'name'          => 'Важная информация',
 		'id'            => "imp",
 		'description'   => 'Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',
+		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section i-n"><div class="imp-n uk-card uk-card-hover">',
+		'after_widget'  => '</div></div></div></div>',
+		'before_title'  => '<div class="w-title imp-t">',
+		'after_title'   => '</div>'
+	));
+		register_sidebar( array(
+		'name'          => 'Краткая важная информация',
+		'id'            => "short_imp",
+		'description'   => 'Краткий Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',
 		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section i-n"><div class="imp-n uk-card uk-card-hover">',
 		'after_widget'  => '</div></div></div></div>',
 		'before_title'  => '<div class="w-title imp-t">',
@@ -219,16 +229,16 @@ function my_navigation_template( $template, $class ){
 function the_breadcrumb(){
 	// получаем номер текущей страницы
 	$pageNum = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-	$separator = ' &raquo; '; //  »
+	$separator = '<span uk-icon="icon: chevron-right; ratio: 0.9;"></span>'; //  »
 	// если главная страница сайта
 	if( is_front_page() ){
 		if( $pageNum > 1 ) {
-			echo '<a href="' . site_url() . '">Главная</a>' . $separator . $pageNum . '-я страница';
+			echo '<a href="' . site_url() . '"><span uk-icon="icon: home; ratio: 1.5" uk-tooltip="title: Главная; pos: bottom"></span></a>' . $separator . $pageNum . '-я страница';
 		} else {
-			echo '<a href="' . site_url() . '">Главная</a>';
+			echo '<a href="' . site_url() . '"><span uk-icon="icon: home; ratio: 1.5" uk-tooltip="title: Главная; pos: bottom"></span></a>';
 		}
 	} else { // не главная
-		echo '<a href="' . site_url() . '">Главная</a>' . $separator;
+		echo '<a href="' . site_url() . '"><span uk-icon="icon: home; ratio: 1.5" uk-tooltip="title: Главная; pos: bottom"></span></a>' . $separator;
 		if( is_single() ){ // записи
 			the_category(', '); echo $separator; the_title();
 		} elseif ( is_page() ){ // страницы WordPress 
@@ -334,3 +344,4 @@ function true_load_posts(){
 	endif;
 	die();
 }
+?>

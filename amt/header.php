@@ -49,8 +49,21 @@
 			<!-- Start uk-container -->
 			<div class="uk-container">
 				<div uk-navbar>
+					<div class="uk-navbar-left">
+						<ul class="uk-navbar-nav">
+							<li uk-drop="mode: click">
+								<a href="#">Test</a>
+								<div class="uk-navbar-dropdown">
+									<ul class="uk-nav uk-navbar-dropdown-nav">
+										<li class="uk-active"><a href="#">Active</a></li>
+										<li><a href="#">Item</a></li>
+										<li><a href="#">Item</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
 					<div class="uk-navbar-right">
-						<a href="https://приемная.алмт.рф" target="_blank" class="priem-dir"><i class="fas fa-ticket-alt"></i>Приемная директора</a>
 						<?php echo do_shortcode( '[bvi text="Версия для слабовидящих"]' ); ?>
 						<div class="box-switch" uk-tooltip="title: Темная тема; pos: bottom"><div class="switch far fa-moon"></div></div>
 					</div>
