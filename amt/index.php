@@ -59,6 +59,7 @@
 		<div class="uk-container">
 
 			<?php dynamic_sidebar('imp'); ?>
+			<?php dynamic_sidebar('short_imp'); ?>
 
 			<!-- Start uk-grid -->
 
@@ -112,7 +113,8 @@
 
 													<h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
 
-													<!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?></div> -->
+													<!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
+												</div>
 
 											</div>
 
@@ -176,7 +178,9 @@
 
 											<?php the_post_thumbnail('', array ('class' => "uk-cover")); ?>
 
-											<div class="uk-card-badge uk-label" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
+											<div class="uk-card-badge-index uk-card-badge uk-label" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
+											
+											<div class="uk-card-badge uk-label" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
 
 											<canvas width="600" height="400"></canvas>
 
@@ -184,7 +188,9 @@
 
 												<img src="/wp-content/themes/amt/assets/img/no_photo.png" class="uk-cover" alt="nophoto">
 
-												<div class="uk-card-badge uk-label" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
+												<div class="uk-card-badge-index uk-card-badge uk-label" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
+												
+												<div class="uk-card-badge uk-label" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
 
 												<canvas width="600" height="400"></canvas>
 
@@ -197,8 +203,6 @@
 											<div class="uk-card-body">
 
 													<h3 class="uk-card-title posts-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-
-														<div class="uk-card-badge uk-label" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
 
 														<?php echo kama_excerpt( array('maxchar'=>120) ); ?>
 
@@ -365,6 +369,9 @@
 					</div>
 
 					<!-- End uk-section -->
+										
+
+					<!-- End uk-section -->
 
 				</div>
 
@@ -381,6 +388,130 @@
 						<!-- Start r-column -->
 
 						<div class="r-column">
+						
+							<div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+
+								<h3 class="important"><?php echo get_cat_name(11) ?></h3>
+
+								<div class="uk-position-relative uk-light nav-slider">
+
+										<a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+
+										<a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+
+								</div>
+
+								<ul class="uk-slider-items uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-grid">
+
+									
+								<?php 
+
+									query_posts('&cat=11&order=DESC'); // базовый запрос + свои параметры 
+
+									if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+									<li>
+
+										<a href="<?php the_permalink(); ?>" class="a-imp-news">
+
+											<div class="uk-card uk-card-default uk-card-hover">
+
+												<div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
+
+												<div class="uk-card-body cardtheme">
+
+													<h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
+
+													<!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
+												</div>
+
+											</div>
+
+										</a>
+
+									</li>
+
+									<?php endwhile; ?>
+
+									<?php wp_reset_query(); ?>
+
+									<?php else : ?>
+
+										<div class="uk-card uk-card-default uk-card-body no-news">
+
+											<p class="no-imp-n">Объявлений еще нет</p>
+
+										</div>
+
+									<?php endif; ?>
+
+								</ul>
+
+							</div>
+							
+							<a href="<?php echo get_category_link(11) ?>" class="no_dec"><div class="all_info" style="margin-bottom: 70px; margin-block-end: 70px;">Все номера газет</div></a>
+							
+							<div uk-slider="autoplay:true; autoplay-interval:5000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+
+								<h3 class="important"><?php echo get_cat_name(12) ?></h3>
+
+								<div class="uk-position-relative uk-light nav-slider">
+
+										<a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+
+										<a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+
+								</div>
+
+								<ul class="uk-slider-items uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-grid">
+
+									
+								<?php 
+
+									query_posts('&cat=12&order=DESC'); // базовый запрос + свои параметры 
+
+									if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+									<li>
+
+										<a href="<?php the_permalink(); ?>" class="a-imp-news">
+
+											<div class="uk-card uk-card-default uk-card-hover">
+
+												<div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
+
+												<div class="uk-card-body cardtheme">
+
+													<h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
+
+													<!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
+												</div>
+
+											</div>
+
+										</a>
+
+									</li>
+
+									<?php endwhile; ?>
+
+									<?php wp_reset_query(); ?>
+
+									<?php else : ?>
+
+										<div class="uk-card uk-card-default uk-card-body no-news">
+
+											<p class="no-imp-n">Объявлений еще нет</p>
+
+										</div>
+
+									<?php endif; ?>
+
+								</ul>
+
+							</div>
+							
+							<a href="<?php echo get_category_link(12) ?>" class="no_dec"><div class="all_info" style="margin-bottom: 20px; margin-block-end: 20px;">Все приказы</div></a>
 
 							<?php dynamic_sidebar('r-column-top'); ?>
 
