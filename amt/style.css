@@ -1217,7 +1217,23 @@ display: none;
 	padding: 15px 20px;
 }
 /* End up-down */
-
+/* Start feedback */
+#feedback {
+	position: fixed;
+	right: 20px;
+	bottom: 80px;
+	border-radius: 2px;
+	background-color: #696969;
+	padding: 16px;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.25s ease;
+}
+#feedback:hover {
+	background-color: #393939;
+	color: #c8c8c8;
+}
+/* End feedback */
 
 /* Начало Анимированное меню для маленьких устройств */
 
@@ -1443,6 +1459,13 @@ html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .uk-slider 
 	.uk-label {
 		padding: 0px 10px;
 	}
+	 .viewers__posts {
+		 right: 20px!important;
+		 left: auto!important;
+	 }
+	 .date__posts {
+		 right: auto!important;
+	 }
  }
 @media (min-width: 1200px) {
 .uk-card-body {

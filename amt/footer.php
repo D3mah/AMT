@@ -50,6 +50,7 @@
 <!-- End copyright -->
 </div>
 	<!-- End full-page -->
+    <a href="https://алмт.рф/feedback" id="feedback" uk-tooltip="title: Обратная связь; pos: left"><span uk-icon="icon: question; ratio: 0.9"></span></a>
 	<div id="top-link"><a href="#top"></a></div>
 <?php wp_footer(); ?>
 </body>
