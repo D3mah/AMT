@@ -178,9 +178,9 @@
 
 											<?php the_post_thumbnail('', array ('class' => "uk-cover")); ?>
 
-											<div class="uk-card-badge-index uk-card-badge uk-label" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
+											<div class="uk-card-badge-index uk-card-badge uk-label date__posts" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
 											
-											<div class="uk-card-badge uk-label" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
+											<div class="uk-card-badge uk-label viewers__posts" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
 
 											<canvas width="600" height="400"></canvas>
 
@@ -188,9 +188,9 @@
 
 												<img src="/wp-content/themes/amt/assets/img/no_photo.png" class="uk-cover" alt="nophoto">
 
-												<div class="uk-card-badge-index uk-card-badge uk-label" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
+												<div class="uk-card-badge-index uk-card-badge uk-label date__posts" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
 												
-												<div class="uk-card-badge uk-label" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
+												<div class="uk-card-badge uk-label viewers__posts" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
 
 												<canvas width="600" height="400"></canvas>
 
