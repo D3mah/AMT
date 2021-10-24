@@ -1217,7 +1217,23 @@ display: none;
 	padding: 15px 20px;
 }
 /* End up-down */
-
+/* Start feedback */
+#feedback {
+	position: fixed;
+	right: 20px;
+	bottom: 80px;
+	border-radius: 2px;
+	background-color: #696969;
+	padding: 16px;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.25s ease;
+}
+#feedback:hover {
+	background-color: #393939;
+	color: #c8c8c8;
+}
+/* End feedback */
 
 /* Начало Анимированное меню для маленьких устройств */
 

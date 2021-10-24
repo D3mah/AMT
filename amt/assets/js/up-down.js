@@ -23,9 +23,9 @@ topLink.toplinkwidth();
 });
 $(window).scroll(function() {
 if($(window).scrollTop() >= 1) {
-topLink.fadeIn(300).children('a').html('<div class="r__button" uk-tooltip="title: Наверх; pos: top"><i class="fas fa-angle-up"></i></div>').parent().removeClass('bottom_button').addClass('top_button');
+topLink.fadeIn(300).children('a').html('<div class="r__button" uk-tooltip="title: Наверх; pos: left"><i class="fas fa-angle-up"></i></div>').parent().removeClass('bottom_button').addClass('top_button');
 } else {
-topLink.children('a').html('<div class="r__button" uk-tooltip="title: Вниз; pos: top"><i class="fas fa-angle-down"></i></div>').parent().removeClass('top_button').addClass('bottom_button');
+topLink.children('a').html('<div class="r__button" uk-tooltip="title: Вниз; pos: left"><i class="fas fa-angle-down"></i></div>').parent().removeClass('top_button').addClass('bottom_button');
 }
 });
 $('#top-link').click(function(e) {if($(this).hasClass('bottom_button')){jQuery("body,html").animate({scrollTop: pos},500);
