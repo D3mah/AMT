@@ -65,108 +65,145 @@
 
 			<div uk-grid>
 
+                <!-- Start uk-width-1-3@m -->
+                <div class="uk-width-1-3@m">
+                    <!-- Start uk-section -->
+                    <div class="uk-section">
+                        <!-- Start uk-container -->
+                        <div class="uk-container">
+                            <!-- Start uk-slider -->
+                            <div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+                                <h3 class="important"><?php echo get_cat_name(4) ?></h3>
+                                <div class="uk-position-relative uk-light nav-slider">
+                                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+                                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+                                </div>
+                                <ul class="uk-slider-items uk-child-width-1-1@m uk-grid">
+                                    <?php
+                                    query_posts('&cat=4&order=DESC'); // базовый запрос + свои параметры
+                                    if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                        <li>
+                                            <a href="<?php the_permalink(); ?>" class="a-imp-news">
+                                                <div class="uk-card uk-card-default uk-card-hover">
+                                                    <div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
+                                                    <div class="uk-card-body cardtheme">
+                                                        <h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
+                                                        <!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <?php endwhile; ?>
+                                        <?php wp_reset_query(); ?>
+                                    <?php else : ?>
+                                        <div class="uk-card uk-card-default uk-card-body no-news">
+                                            <p class="no-imp-n">Объявлений еще нет</p>
+                                        </div>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                            <!-- End uk-slider -->
+                            <a href="<?php echo get_category_link( 4 ) ?>" class="no_dec"><div class="all_info">Все Объявления</div></a>
+                        </div>
+                        <!-- End uk-container -->
+                    </div>
+                    <!-- End uk-section -->
+                </div>
+
+                <!-- End uk-width-1-3@m -->
+
+                <!-- Start uk-width-1-3@m -->
+                <div class="uk-width-1-3@m">
+                    <!-- Start uk-section -->
+                    <div class="uk-section">
+                        <div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+                            <h3 class="important"><?php echo get_cat_name(11) ?></h3>
+                            <div class="uk-position-relative uk-light nav-slider">
+                                <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+                                <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+                            </div>
+                            <ul class="uk-slider-items uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-grid">
+                                <?php
+                                query_posts('&cat=11&order=DESC'); // базовый запрос + свои параметры
+                                if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                    <li>
+                                        <a href="<?php the_permalink(); ?>" class="a-imp-news">
+                                            <div class="uk-card uk-card-default uk-card-hover">
+                                                <div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
+                                                <div class="uk-card-body cardtheme">
+                                                    <h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
+                                                    <!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                <?php endwhile; ?>
+                                    <?php wp_reset_query(); ?>
+                                <?php else : ?>
+                                    <div class="uk-card uk-card-default uk-card-body no-news">
+                                        <p class="no-imp-n">Объявлений еще нет</p>
+                                    </div>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                        <a href="<?php echo get_category_link(11) ?>" class="no_dec"><div class="all_info" style="margin-bottom: 70px; margin-block-end: 70px;">Все номера газет</div></a>
+                    </div>
+                    <!-- End uk-section -->
+                </div>
+                <!-- End uk-width-1-3@m -->
+                <div class="uk-width-1-3@m">
+                    <!-- Start uk-section -->
+                    <div class="uk-section">
+                        <div uk-slider="autoplay:true; autoplay-interval:5000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+                            <h3 class="important"><?php echo get_cat_name(12) ?></h3>
+                            <div class="uk-position-relative uk-light nav-slider">
+                                <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+                                <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+                            </div>
+                            <ul class="uk-slider-items uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-grid">
+                                <?php
+                                query_posts('&cat=12&order=DESC'); // базовый запрос + свои параметры
+                                if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                    <li>
+                                        <a href="<?php the_permalink(); ?>" class="a-imp-news">
+                                            <div class="uk-card uk-card-default uk-card-hover">
+                                                <div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
+                                                <div class="uk-card-body cardtheme">
+                                                    <h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
+                                                    <!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                <?php endwhile; ?>
+                                    <?php wp_reset_query(); ?>
+                                <?php else : ?>
+                                    <div class="uk-card uk-card-default uk-card-body no-news">
+                                        <p class="no-imp-n">Объявлений еще нет</p>
+                                    </div>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                        <a href="<?php echo get_category_link(12) ?>" class="no_dec"><div class="all_info" style="margin-bottom: 20px; margin-block-end: 20px;">Все приказы</div></a>
+                    </div>
+                    <!-- End uk-section -->
+                </div>
+
 				<!-- Start uk-width-2-3@m -->
 
 				<div class="uk-width-2-3@m">
 
-					<!-- Start uk-section -->
+                    <!-- Start uk-container -->
 
-					<div class="uk-section">
-
-						<!-- Start uk-container -->
-
-						<div class="uk-container">
-
-							<!-- Start uk-slider -->
-
-							<div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
-
-								<h3 class="important"><?php echo get_cat_name(4) ?></h3>
-
-								<div class="uk-position-relative uk-light nav-slider">
-
-										<a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
-
-										<a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
-
-								</div>
-
-								<ul class="uk-slider-items uk-child-width-1-2@xl uk-child-width-1-2@l uk-child-width-1-1@m uk-child-width-1-1@s uk-grid">
-
-									
-
-								<?php 
-
-									query_posts('&cat=4&order=DESC'); // базовый запрос + свои параметры 
-
-									if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-									<li>
-
-										<a href="<?php the_permalink(); ?>" class="a-imp-news">
-
-											<div class="uk-card uk-card-default uk-card-hover">
-
-												<div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
-
-												<div class="uk-card-body cardtheme">
-
-													<h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
-
-													<!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
-												</div>
-
-											</div>
-
-										</a>
-
-									</li>
-
-									<?php endwhile; ?>
-
-									<?php wp_reset_query(); ?>
-
-									<?php else : ?>
-
-										<div class="uk-card uk-card-default uk-card-body no-news">
-
-											<p class="no-imp-n">Объявлений еще нет</p>
-
-										</div>
-
-									<?php endif; ?>
-
-								</ul>
-
-							</div>
-
-							<!-- End uk-slider -->
-
-							<a href="<?php echo get_category_link( 4 ) ?>" class="no_dec"><div class="all_info">Все Объявления</div></a>
-
-						</div>
-
-						<!-- End uk-container -->
-
-					</div>
-
-					<!-- End uk-section -->
-
-					<!-- Start uk-section -->
-
-					<div class="uk-section">
-
-						<!-- Start uk-container -->
-
-						<div class="uk-container">
+                    <div class="uk-container">
 
 							<h3 class="l-news">Все новости</h3>
 
-							<?php 
+							<?php
 
 							global $query_string; // параметры базового запроса
 
-							query_posts( $query_string .'&cat=1&order=DESC' ); // базовый запрос + свои параметры 
+							query_posts( $query_string .'&cat=1&order=DESC' ); // базовый запрос + свои параметры
 
 							if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -179,7 +216,7 @@
 											<?php the_post_thumbnail('', array ('class' => "uk-cover")); ?>
 
 											<div class="uk-card-badge-index uk-card-badge uk-label date__posts" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
-											
+
 											<div class="uk-card-badge uk-label viewers__posts" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
 
 											<canvas width="600" height="400"></canvas>
@@ -189,7 +226,7 @@
 												<img src="/wp-content/themes/amt/assets/img/no_photo.png" class="uk-cover" alt="nophoto">
 
 												<div class="uk-card-badge-index uk-card-badge uk-label date__posts" uk-tooltip="title: Дата поста; pos: top"><?php echo get_the_date(); ?></div>
-												
+
 												<div class="uk-card-badge uk-label viewers__posts" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
 
 												<canvas width="600" height="400"></canvas>
@@ -214,7 +251,7 @@
 
 							</div>
 
-							<?php endwhile; ?> 
+							<?php endwhile; ?>
 
 							<?php echo the_posts_pagination(array(
 
@@ -246,11 +283,8 @@
 
 						</div>
 
-						<!-- End uk-container -->
+                    <!-- End uk-container -->
 
-					</div>
-
-					<!-- End uk-section -->
 
 					<!-- Start uk-section -->
 
@@ -380,151 +414,12 @@
 				<!-- Start uk-width-expand@m -->
 
 				<div class="uk-width-expand@m">
-
-					<!-- Start uk-section -->
-
-					<div class="uk-section">
-
-						<!-- Start r-column -->
-
-						<div class="r-column">
-						
-							<div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
-
-								<h3 class="important"><?php echo get_cat_name(11) ?></h3>
-
-								<div class="uk-position-relative uk-light nav-slider">
-
-										<a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
-
-										<a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
-
-								</div>
-
-								<ul class="uk-slider-items uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-grid">
-
-									
-								<?php 
-
-									query_posts('&cat=11&order=DESC'); // базовый запрос + свои параметры 
-
-									if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-									<li>
-
-										<a href="<?php the_permalink(); ?>" class="a-imp-news">
-
-											<div class="uk-card uk-card-default uk-card-hover">
-
-												<div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
-
-												<div class="uk-card-body cardtheme">
-
-													<h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
-
-													<!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
-												</div>
-
-											</div>
-
-										</a>
-
-									</li>
-
-									<?php endwhile; ?>
-
-									<?php wp_reset_query(); ?>
-
-									<?php else : ?>
-
-										<div class="uk-card uk-card-default uk-card-body no-news">
-
-											<p class="no-imp-n">Объявлений еще нет</p>
-
-										</div>
-
-									<?php endif; ?>
-
-								</ul>
-
-							</div>
-							
-							<a href="<?php echo get_category_link(11) ?>" class="no_dec"><div class="all_info" style="margin-bottom: 70px; margin-block-end: 70px;">Все номера газет</div></a>
-							
-							<div uk-slider="autoplay:true; autoplay-interval:5000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
-
-								<h3 class="important"><?php echo get_cat_name(12) ?></h3>
-
-								<div class="uk-position-relative uk-light nav-slider">
-
-										<a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
-
-										<a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
-
-								</div>
-
-								<ul class="uk-slider-items uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-grid">
-
-									
-								<?php 
-
-									query_posts('&cat=12&order=DESC'); // базовый запрос + свои параметры 
-
-									if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-									<li>
-
-										<a href="<?php the_permalink(); ?>" class="a-imp-news">
-
-											<div class="uk-card uk-card-default uk-card-hover">
-
-												<div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
-
-												<div class="uk-card-body cardtheme">
-
-													<h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
-
-													<!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
-												</div>
-
-											</div>
-
-										</a>
-
-									</li>
-
-									<?php endwhile; ?>
-
-									<?php wp_reset_query(); ?>
-
-									<?php else : ?>
-
-										<div class="uk-card uk-card-default uk-card-body no-news">
-
-											<p class="no-imp-n">Объявлений еще нет</p>
-
-										</div>
-
-									<?php endif; ?>
-
-								</ul>
-
-							</div>
-							
-							<a href="<?php echo get_category_link(12) ?>" class="no_dec"><div class="all_info" style="margin-bottom: 20px; margin-block-end: 20px;">Все приказы</div></a>
-
+                    <!-- Start r-column -->
+                    <div class="r-column">
 							<?php dynamic_sidebar('r-column-top'); ?>
-
 							<?php dynamic_sidebar('r-column-bottom'); ?>
-
 						</div>
-
-						<!-- End r-column -->
-
-					</div>
-
-					<!-- End uk-section -->
-
+                    <!-- End r-column -->
 				</div>
 
 				<!-- End uk-width-expand@m -->
