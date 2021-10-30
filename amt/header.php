@@ -165,57 +165,57 @@
 			</div>
 		</div>
 
-        <div class="uk-grid-match" uk-grid="">
-            <div class="uk-width-1-3@m uk-position-relative">
-                <a href="/ped" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [Глав.корпус]</h3>
-                    <div class="svg__teacher"></div>
-                </a>
-            </div>
-            <div class="uk-width-1-3@m uk-position-relative">
-                <a href="/ped-1" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [1 корпус]</h3>
-                    <div class="svg__teacher"></div>
-                </a>
-            </div>
-            <div class="uk-width-1-3@m uk-position-relative">
-                <a href="/ped-2" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [2 корпус]</h3>
-                    <div class="svg__teacher"></div>
-                </a>
-            </div>
-            <div class="uk-width-1-2@m uk-position-relative">
-                <a href="/info" class="uk-card-large uk-card-default uk-card-hover uk-card-body">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Контактные данные отделов</h3>
-                    <div class="svg__work"></div>
-                </a>
-            </div>
-            <div class="uk-width-1-2@m uk-position-relative">
-                <a href="https://docs.google.com/spreadsheets/d/1WlQZwsXSm7KQJ1a23L6mBVUvKt9YQa1-0DMNCq609qc" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Планирование работы</h3>
-                    <div class="svg__work"></div>
-                </a>
-            </div>
-            <div class="uk-width-1-2@m uk-position-relative">
-                <a href="https://docs.google.com/spreadsheets/d/10N0oBgsKJX_dRzSWR3mB53pL22EwAO87K6xqZ9ELb6k" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Хозяйственная часть</h3>
-                    <div class="svg__house"></div>
-                </a>
-            </div>
-            <div class="uk-width-1-2@m uk-position-relative">
-                <a href="/help" class="uk-card-large uk-card-default uk-card-hover uk-card-body">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">ИКТ обеспечение</h3>
-                    <div class="svg__programmer"></div>
-                </a>
-            </div>
-        </div>
-
-
-        <div class="uk-grid-match" uk-grid="">
-            <div class="uk-width-1-1 uk-position-relative">
-                <a href="https://docs.google.com/spreadsheets/d/1WLU7w2J5a_e3teXLzzFd1u-DDGOLkbr6k3MmVqHyxiE/edit?usp=sharing" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body center" rel="noopener">
-                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">COVID-табличка [кураторам]</h3>
-                    <div class="svg__med"></div>
-                </a>
-            </div>
-        </div>
+<!--        <div class="uk-grid-match" uk-grid="">-->
+<!--            <div class="uk-width-1-3@m uk-position-relative">-->
+<!--                <a href="/ped" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [Глав.корпус]</h3>-->
+<!--                    <div class="svg__teacher"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-3@m uk-position-relative">-->
+<!--                <a href="/ped-1" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [1 корпус]</h3>-->
+<!--                    <div class="svg__teacher"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-3@m uk-position-relative">-->
+<!--                <a href="/ped-2" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [2 корпус]</h3>-->
+<!--                    <div class="svg__teacher"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="/info" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Контактные данные отделов</h3>-->
+<!--                    <div class="svg__work"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="https://docs.google.com/spreadsheets/d/1WlQZwsXSm7KQJ1a23L6mBVUvKt9YQa1-0DMNCq609qc" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Планирование работы</h3>-->
+<!--                    <div class="svg__work"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="https://docs.google.com/spreadsheets/d/10N0oBgsKJX_dRzSWR3mB53pL22EwAO87K6xqZ9ELb6k" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Хозяйственная часть</h3>-->
+<!--                    <div class="svg__house"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="/help" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">ИКТ обеспечение</h3>-->
+<!--                    <div class="svg__programmer"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!---->
+<!--        <div class="uk-grid-match" uk-grid="">-->
+<!--            <div class="uk-width-1-1 uk-position-relative">-->
+<!--                <a href="https://docs.google.com/spreadsheets/d/1WLU7w2J5a_e3teXLzzFd1u-DDGOLkbr6k3MmVqHyxiE/edit?usp=sharing" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body center" rel="noopener">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">COVID-табличка [кураторам]</h3>-->
+<!--                    <div class="svg__med"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->

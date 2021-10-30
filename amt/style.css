@@ -44,10 +44,10 @@ body {
 	--date-news: #39f;
 	--button-news:#39f;
 	--button-news-hover: #1b4f84;
-	--nav-slider: #848484;
+	/*--nav-slider: #848484;*/
 	--nav-button: #848484;
 	--news-plus: #009ee0;
-	--button-slider: #27272d;
+	--button-slider: #d3d3de;
 	--line-menu:#696b73;
 	--footer-menu: #fbfbfb;
 	--footer-menu-hover: #696b73;
@@ -116,10 +116,10 @@ body {
 	--date-news: #009ee0;
 	--button-news: #1e87f0;
 	--button-news-hover: #057fb3;
-	--nav-slider: #848484;
+	/*--nav-slider: #848484;*/
 	--nav-button: #848484;
 	--news-plus: #009ee0;
-	--button-slider: #fbfbfb;
+	--button-slider: #009ee0;
 	--line-menu: #009ee0;
 	--footer-menu: #057fb3;
 	--footer-menu-hover: #035172;
@@ -419,36 +419,34 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 .nav-slider .uk-position-center-left {
 	left: auto;
 	right: 35px;
-	border: 1px solid var(--nav-slider);
 	padding: 5px 4px;
 	transition: 0.25s ease;
 	color: var(--nav-button);
 }
 .nav-slider .uk-position-center-right {
-	border: 1px solid var(--nav-slider);
 	padding: 5px 4px;
 	transition: 0.25s ease;
 	color: var(--nav-button)!important;
 }
 .nav-slider .uk-position-center-left svg, .nav-slider .uk-position-center-right svg{
-	inline-size: 18px;
-	width: 18px;
-	block-size: 18px;
-	height: 18px;
+	inline-size: 25px;
+	width: 25px;
+	block-size: 25px;
+	height: 25px;
 }
-.nav-slider .uk-position-center-right:hover , .nav-slider .uk-position-center-left:hover {
+/*.nav-slider .uk-position-center-right:hover , .nav-slider .uk-position-center-left:hover {
 	background-color: var(--hover);
-	color: (--text);
-}
+	color: var(--text);
+} */
 .uk-card svg {
 	color: var(--news-plus)!important;
 }
 .uk-position-small:hover svg {
 	color: var(--button-slider)!important;
 }
-.uk-light .uk-slidenav:active, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:active, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:active, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:active, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:active, .uk-card-primary.uk-card-body .uk-slidenav:active, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:active, .uk-card-secondary.uk-card-body .uk-slidenav:active, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:active, .uk-overlay-primary .uk-slidenav:active, .uk-offcanvas-bar .uk-slidenav:active {
-	color: var(--nav-slider)!important;
-}
+/*.uk-light .uk-slidenav:active, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:active, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:active, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:active, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:active, .uk-card-primary.uk-card-body .uk-slidenav:active, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:active, .uk-card-secondary.uk-card-body .uk-slidenav:active, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:active, .uk-overlay-primary .uk-slidenav:active, .uk-offcanvas-bar .uk-slidenav:active {*/
+/*	color: var(--nav-slider)!important;*/
+/*}*/
 .uk-offcanvas-bar {
 	background: var(--bg-canvas)!important;
 }
@@ -461,9 +459,9 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 .uk-offcanvas-bar .uk-nav-default > li.menu-item > a:hover {
 	color: var(--text-news-hover);
 }
-.uk-light .uk-slidenav:hover, .uk-light .uk-slidenav:focus, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-card-primary.uk-card-body .uk-slidenav:hover, .uk-card-primary.uk-card-body .uk-slidenav:focus, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:hover, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:focus, .uk-card-secondary.uk-card-body .uk-slidenav:hover, .uk-card-secondary.uk-card-body .uk-slidenav:focus, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:hover, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:focus, .uk-overlay-primary .uk-slidenav:hover, .uk-overlay-primary .uk-slidenav:focus, .uk-offcanvas-bar .uk-slidenav:hover, .uk-offcanvas-bar .uk-slidenav:focus {
-	color: var(--nav-slider)!important;
-}
+/*.uk-light .uk-slidenav:hover, .uk-light .uk-slidenav:focus, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-card-primary.uk-card-body .uk-slidenav:hover, .uk-card-primary.uk-card-body .uk-slidenav:focus, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:hover, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:focus, .uk-card-secondary.uk-card-body .uk-slidenav:hover, .uk-card-secondary.uk-card-body .uk-slidenav:focus, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:hover, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:focus, .uk-overlay-primary .uk-slidenav:hover, .uk-overlay-primary .uk-slidenav:focus, .uk-offcanvas-bar .uk-slidenav:hover, .uk-offcanvas-bar .uk-slidenav:focus {*/
+/*	color: var(--nav-slider)!important;*/
+/*}*/
 .c-icon {
 	padding-block-start: 40px;
 	padding-top: 40px;
