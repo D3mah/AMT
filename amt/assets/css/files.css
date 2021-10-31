@@ -131,38 +131,94 @@ a[href$=".3gp"]::before, a[href$=".3GP"]::before,a[href$=".avi"]::before,a[href$
 }
 .bottom-icon .security a::before
 {
+	top: 22px;
+	left: -75px;
 	content: "\f505";
 	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .security a:hover::before
+{
+	left: 20px;
 }
 .bottom-icon .help a::before
 {
+	top: 22px;
+	left: -75px;
 	content: "\f4c4";
 	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .help a:hover::before
+{
+	left: 20px;
 }
 .bottom-icon .work a::before
 {
+	top: 22px;
+	left: -75px;
 	content: "\f0b1";
 	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .work a:hover::before
+{
+	left: 20px;
 }
 .bottom-icon .book a::before
 {
+	top: 22px;
+	left: -75px;
 	content: "\f518";
 	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .book a:hover::before
+{
+	left: 20px;
 }
 .bottom-icon .contact a::before
 {
+	top: 22px;
+	left: -75px;
 	content: "\f2bb";
 	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .contact a:hover::before
+{
+	left: 20px;
 }
 .bottom-icon .imp a::before
 {
+	top: 22px;
+	left: -75px;
 	content: "\f071";
 	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .imp a:hover::before
+{
+	left: 20px;
 }
 .bottom-icon .education a::before
 {
+	top: 22px;
+	left: -75px;
 	content: "\f19d";
 	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .education a:hover::before
+{
+	left: 20px;
 }
  @media (max-width: 1480px) {
 	.bottom-icon .education a::before, .bottom-icon .imp a::before, .bottom-icon .contact a::before, .bottom-icon .book a::before, .bottom-icon .work a::before, .bottom-icon .help a::before, .bottom-icon .security a::before {

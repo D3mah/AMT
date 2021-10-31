@@ -3,8 +3,8 @@ Theme Name: AMT
 Theme URI: vk.com/d3ma_k
 Author: Dmitriy Kolmakov
 Author URI: vk.com/d3ma_k
-Description: Шаблон для образовательных сайтов. Последнее обновление 18.04.2021. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
-Version: 2.8
+Description: Шаблон для образовательных сайтов. Последнее обновление 31.10.2021. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
+Version: 2.9
 License: GNU General Public License v2 or later
 License URI: www.gnu.org/licenses/gpl-2.0.html
 Tags: amt, edu
@@ -235,7 +235,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 .sub-menu {
 	display: none;
 	position: absolute;
-  font-size: 12px;
+  	font-size: 12px;
 	z-index: 2;
 	list-style: none;
 	padding: 0px;
@@ -296,7 +296,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--text-menu);
 	display: flex;
 	align-items: center;
-	padding: 20px 20px;
+	padding: 30px 20px;
 	overflow:hidden;
 }
 .c-icon a:after {
@@ -310,13 +310,16 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--text-menu);
 }
 .c-icon a:hover:after {
-	right: 20px;
+	right: 25px;
 }
 .c-icon a div {
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	inline-size: 100%;
+}
+.c-icon .current_page_item a {
+
 }
 .u-card-s:hover , .u-card-s:focus {
 	background-color: var(--switch-menu);
@@ -791,7 +794,7 @@ footer .current_page_item {
 }
 .page_content {
 	background-color: var(--block);
-	border-radius: 10px;
+	border-radius: 0px 0px 10px 10px;
 	color: var(--page-content)!important;
 	padding: 40px 10px;
 	margin: 0;
@@ -931,9 +934,14 @@ span.post-date {
 	transition: 0.3s ease;
 	color: var(--text-menu);
 	font-family: 'Roboto Condensed Regular', sans-serif;
+
+}
+.backsite {
+	border-radius: 10px 0px 0px 0px;
 }
 .print {
 	padding: 20px 10px;
+	border-radius: 0px 10px 0px 0px;
 }
 .backsite:hover {
 	background-color: var(--copy-hover);
@@ -959,7 +967,7 @@ span.post-date {
 	font-family: 'Roboto Condensed Bold', sans-serif;
 	position: absolute;
     z-index: inherit;
-    top: 55px;
+    bottom: 50px;
     left: 30px;
 }
 .bg-color {
@@ -973,6 +981,7 @@ span.post-date {
 }
 .post-content {
 	padding: 20px;
+	border-radius: 0px 0px 10px 10px;
 }
 .uk-card-badge-post-date, .uk-card-badge-post-views {
     position: absolute;

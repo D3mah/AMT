@@ -7,9 +7,6 @@
 
 <?php get_header() ; ?>
 <style>
-	.bottom-icon a div {
-		font-size: 13px;
-	}
 	.c-icon .current_page_item {
 		background-color: transparent!important;
 	}

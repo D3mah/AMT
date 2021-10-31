@@ -42,7 +42,7 @@
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<?php if (get_the_post_thumbnail()) { ?>
 								<div class="bg-color">
-									<div class="uk-background-center-center uk-background-cover uk-height-large uk-panel uk-flex" uk-parallax="bgy: -300" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('<?php echo get_the_post_thumbnail_url(); ?>'); background-repeat: no-repeat;">
+									<div class="uk-background-center-center uk-height-large uk-panel uk-flex" uk-parallax="bgy: -300" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('<?php echo get_the_post_thumbnail_url(); ?>'); background-repeat: no-repeat;">
 										<h2 class="post-title"><?php the_title(); ?></h2>
 										<div class="uk-card-badge-post-date uk-label" uk-tooltip="title: Дата поста; pos: top" title="" aria-expanded="false"><?php echo get_the_date(); ?></div>
 										<div class="uk-card-badge-post-views uk-label" uk-tooltip="title: Просмотров; pos: top"><i class="fas fa-eye"> </i><?php the_views(); ?></div>
