@@ -124,7 +124,7 @@ a[href$=".3gp"]::before, a[href$=".3GP"]::before,a[href$=".avi"]::before,a[href$
 }
 .bottom-icon .security a::before, .bottom-icon .help a::before, .bottom-icon .work a::before, .bottom-icon .book a::before,.bottom-icon .contact a::before, .bottom-icon .imp a::before,.bottom-icon .education a::before
 {
-	color: var(--text-news)!important;
+	color: var(--text-news);
 	font: normal normal normal 44px/1 FontAwesome;
 	margin: 0px 5px;
 	text-align: center;

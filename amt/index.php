@@ -72,7 +72,7 @@
                         <!-- Start uk-container -->
                         <div class="uk-container">
                             <!-- Start uk-slider -->
-                            <div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+                            <div uk-slider="autoplay:false; autoplay-interval:7000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
                                 <h3 class="important"><?php echo get_cat_name(4) ?></h3>
                                 <div class="uk-position-relative uk-light nav-slider">
                                     <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
