@@ -222,14 +222,35 @@ a[href$=".3gp"]::before, a[href$=".3GP"]::before,a[href$=".avi"]::before,a[href$
 }
  @media (max-width: 1480px) {
 	.bottom-icon .education a::before, .bottom-icon .imp a::before, .bottom-icon .contact a::before, .bottom-icon .book a::before, .bottom-icon .work a::before, .bottom-icon .help a::before, .bottom-icon .security a::before {
-		display: none;
+		font-size: 24px;
+		top: 26px;
 	}
 	.bottom-icon a div {
-		font-size: 16px!important
+		font-size: 13px!important
 	}
+	 .c-icon a:after {
+		 top: 26px!important;
+	 }
+	 .bottom-icon .imp a::before {
+		 top: 27px;
+	 }
  }
   @media (max-width: 1196px) {
 	  	.bottom-icon .education a::before, .bottom-icon .imp a::before, .bottom-icon .contact a::before, .bottom-icon .book a::before, .bottom-icon .work a::before, .bottom-icon .help a::before, .bottom-icon .security a::before {
 		display: block;
 	}
   }
+@media (max-width: 959px) {
+	.bottom-icon a div {
+		font-size: 16px!important
+	}
+	.bottom-icon .education a::before, .bottom-icon .imp a::before, .bottom-icon .contact a::before, .bottom-icon .book a::before, .bottom-icon .work a::before, .bottom-icon .help a::before, .bottom-icon .security a::before {
+		font-size: 40px;
+		top: 22px;
+	}
+	.c-icon a:after {
+		top: 26px!important;
+		font-size: 22px!important;
+	}
+
+}
