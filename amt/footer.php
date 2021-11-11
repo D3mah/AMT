@@ -2,11 +2,11 @@
 <div class="uk-container">
 	<!-- Start uk-grid -->
 	<div uk-grid>
-		<!-- Start uk-width@m -->
+		<!-- Start uk-width-1-1@m -->
 		<div class="uk-width-1-1 banners-bottom">
 			<?php dynamic_sidebar('banners'); ?>
 		</div>
-		<!-- End uk-width@m -->
+		<!-- End uk-width-1-1@m -->
 	</div>
 	<!-- End uk-grid -->
 </div>
@@ -43,7 +43,7 @@
 <div class="copyright">
 	<!-- Start uk-container -->
 	<div class="uk-container">
-		&copy;<?php echo the_date( 'Y', '', '', '' ); ?> <?php bloginfo( 'description' ); ?>
+		&copy;<?php echo the_date( '2021', '', '', '' ); ?> <?php bloginfo( 'description' ); ?>
 	</div>
 	<!-- End uk-container -->
 </div>
