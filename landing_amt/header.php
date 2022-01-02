@@ -6,3 +6,6 @@
         <?php wp_head(); ?>
     </head>
     <body>
+        <header class="landing">
+            <a href="" class="uk-icon-link" uk-icon="heart">Heart</a>
+        </header>
