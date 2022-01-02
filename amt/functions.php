@@ -5,7 +5,8 @@ add_action('wp_footer', 'script'); // Script
 add_action('after_setup_theme', 'menu'); // Menu
 add_action('widgets_init', 'support'); // Support
 add_action('widgets_init', 'sidebars'); // Sidebars
-add_action('init', 'register_post_photo'); // New Post type
+add_action('init', 'register_post_photo'); // New post Photoalbums
+add_action('init', 'register_post_stories'); // New post Stories
 add_action('admin_head', 'true_post_type_help_tab'); //help
 add_action('wp_ajax_loadmore', 'true_load_posts');
 add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
@@ -55,18 +56,18 @@ function sidebars() {
 		'after_title'   => null
 	));
 	register_sidebar( array(
-		'name'          => 'Важная информация',
-		'id'            => "imp",
-		'description'   => 'Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',
-		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section i-n"><div class="imp-n uk-card uk-card-hover">',
+		'name'          => 'Истории',
+		'id'            => "stories_amt",
+		'description'   => 'Истории на сайте',
+		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section"><div class="uk-card">',
 		'after_widget'  => '</div></div></div></div>',
 		'before_title'  => '<div class="w-title imp-t">',
 		'after_title'   => '</div>'
 	));
-		register_sidebar( array(
-		'name'          => 'Краткая важная информация',
-		'id'            => "short_imp",
-		'description'   => 'Краткий Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',
+	register_sidebar( array(
+		'name'          => 'Важная информация',
+		'id'            => "imp",
+		'description'   => 'Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',
 		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section i-n"><div class="imp-n uk-card uk-card-hover">',
 		'after_widget'  => '</div></div></div></div>',
 		'before_title'  => '<div class="w-title imp-t">',
@@ -296,6 +297,37 @@ function register_post_photo(){
 		'has_archive'         => false
 	] );
 }
+
+
+function register_post_stories(){
+	register_post_type( 'stories', [
+		'label'  => null,
+		'labels' => [
+			'name'               => 'Истории', // основное название для типа записи
+			'singular_name'      => 'Истории', // название для одной записи этого типа
+			'add_new'            => 'Добавить историю', // для добавления новой записи
+			'add_new_item'       => 'Добавление истории', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование истории', // для редактирования типа записи
+			'new_item'           => 'Новая история', // текст новой записи
+			'view_item'          => 'Смотреть историю', // для просмотра записи этого типа.
+			'search_items'       => 'Искать истории', // для поиска по этим типам записи
+			'not_found'          => 'История не найдена', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'parent_item_colon'  => '', // для родителей (у древовидных типов)
+			'menu_name'          => 'Истории', // название меню
+		],
+		'description'         => 'Фотогалерии мероприятий',
+		'public'              => true,
+		'show_in_menu'        => true, // показывать ли в меню адмнки
+		'show_in_rest'        => true, // добавить в REST API. C WP 4.7
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-format-gallery',
+		'supports'            => [ 'title', 'thumbnail', 'author', 'editor' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'          => [],
+		'has_archive'         => false
+	] );
+}
+
 
 function true_post_type_help_tab() {
 	$screen = get_current_screen();

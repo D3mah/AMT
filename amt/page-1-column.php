@@ -7,9 +7,6 @@
 
 <?php get_header() ; ?>
 <style>
-	.bottom-icon a div {
-		font-size: 13px;
-	}
 	.c-icon .current_page_item {
 		background-color: transparent!important;
 	}
@@ -30,7 +27,7 @@
 					'theme_location'  => 'b-slider',
 					'container'       => 'div',
 					'container_id' => null,
-					'container_class' => 'uk-child-width-1-6@l uk-child-width-1-3@m bottom-icon uk-text-center uk-grid',
+					'container_class' => 'uk-child-width-1-3@l uk-child-width-1-3@m bottom-icon uk-text-center uk-grid',
 					'items_wrap'      => '%3$s',
 					'depth'           => 1,
 					'walker'        	=> new Amt_Walker
@@ -85,7 +82,7 @@
 							</div>
 							<!-- End help-button -->
 							<!-- Start Test -->
-							<div class="uk-background-center-center uk-height-large uk-panel uk-flex" uk-parallax="bgy: -300" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/wp-content/themes/amt/assets/img/page_image.png'); background-repeat: repeat;">
+							<div class="uk-height-small uk-panel uk-flex" uk-parallax="bgx: -300" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/wp-content/themes/amt/assets/img/page_image.png'); background-repeat: repeat;">
 								<h2 class="post-title"><?php the_title(); ?></h2>
 							</div>
 							<!-- End Test -->
@@ -111,7 +108,7 @@
 
 							</div>
 
-							<!-- End page_contant -->
+							<!-- End page_content -->
 
 						</div>
 

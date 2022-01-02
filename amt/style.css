@@ -3,8 +3,8 @@ Theme Name: AMT
 Theme URI: vk.com/d3ma_k
 Author: Dmitriy Kolmakov
 Author URI: vk.com/d3ma_k
-Description: Шаблон для образовательных сайтов. Последнее обновление 18.04.2021. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
-Version: 2.8
+Description: Шаблон для образовательных сайтов. Последнее обновление 11.11.2021. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
+Version: 2.91
 License: GNU General Public License v2 or later
 License URI: www.gnu.org/licenses/gpl-2.0.html
 Tags: amt, edu
@@ -21,21 +21,58 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+/* Цвета тёмной темы */
+.dark_update {
+	--background-color: #1c1d21; /* Фон сайта old --bg */
+	--main-text: #a6a6a7; /* Основной цвет текста сайта  old --text */
+	--hover-element: #1e1e22; /* Цвет элемента при наведении old --switch  */
+	--main-block: #27272d; /* Цвет блоков на сайте old --block */
+	--secondary-block: #27272d; /* Цвет вспомогательных блоков old --block-menu */
+	--name-site: #27b9ff; /* Цвет названия сайта old --name */
+	--hover-block: #696b73; /* Цвет при наведении на блоки old --switch-menu */
+	--main-horizontal-menu: #43424b; /* Цвет основного горизонтального меню old --menu */
+	--main-horizontal-submenu: #43424b; /* Цвет основного подменю old --sub-menu */
+	--hover-main-horizontal-submenu: #27272d; /* Цвет при наведении подменю old --sub-menu-hover */
+	--text-menu: #fbfbfb; /* Цвет текста меню */
+	--text-submenu: #e8e8e8; /* Цвет текста подменю old --sub-text */
+	--hover-link: #fefefe; /* Основной цвет ссылок при наведении old --hover */
+
+
+}
+/* Цвета светлой/дефолтной темы */
+.root_update {
+	--background-color: #1c1d21; /* Фон сайта old --bg */
+	--main-text: #212226; /* Основной цвет текста сайта old --text */
+	--hover-element: #1b7b98; /* Цвет элемента при наведении old --switch */
+	--main-block: #fbfbfb; /* Цвет блоков на сайте old --block */
+	--secondary-block: #1b7b98; /* Цвет вспомогательных блоков old --block-menu */
+	--name-site: #1b7b98; /* Цвет названия сайта old --name */
+	--hover-block: #055475; /* Цвет при наведении на блоки old --switch-menu */
+	--main-horizontal-menu: #1b7b98; /* Цвет основного горизонтального меню old --menu */
+	--main-horizontal-submenu: #057fb3; /* Цвет основного подменю old --sub-menu */
+	--hover-main-horizontal-submenu: #035172; /* Цвет при наведении подменю old --sub-menu-hover */
+	--text-menu: #fbfbfb; /* Цвет текста меню */
+	--text-submenu: #222; /* Цвет текста подменю old --sub-text */
+	--hover-link: #1b7b98; /* Основной цвет ссылок при наведении old --hover */
+
+
+
+}
 .dark {
-	--switch: #1e1e22;
-	--switch-button: #e8e8e8;
-	--bg: #1c1d21;
-	--text: #a6a6a7;
-	--block: #27272d;
-	--block-menu: #27272d;
-	--switch-menu: #696b73;
-	--name: #27b9ff;
-	--menu: #43424b;
-	--sub-menu: #43424b;
+	--switch: #1e1e22; /* + */
+	/* --switch-button: #e8e8e8; */
+	--bg: #1c1d21; /* + */
+	--text: #a6a6a7; /* + */
+	--block: #27272d; /* + */
+	--block-menu: #27272d; /* + */
+	--switch-menu: #696b73; /* + */
+	--name: #27b9ff; /* + */
+	--menu: #43424b; /* + */
+	--sub-menu: #43424b; /* + */
 	/* --menu-hover: #27272d; */
-	--sub-menu-hover:#27272d;
-	--sub-text: #e8e8e8;
-	--hover: #fefefe;
+	--sub-menu-hover:#27272d; /* + */
+	--sub-text: #e8e8e8; /* + */
+	--hover: #fefefe; /* + */
 	--text-news: #fbfbfb;
 	--text-menu: #fbfbfb;
 	--text-news-hover: #c78282;
@@ -95,20 +132,20 @@ body {
 /* End switcher-site */
 
 :root {
-	--bg: #e8e8e8;
-	--text: #212226;
-	--switch: #1b7b98;
-	--block: #fbfbfb;
-	--block-menu:#1b7b98;
-	--switch-menu: #055475;
-	--name: #1b7b98;
-	--hover: #1b7b98;
-	--menu: #009ee0;
+	--bg: #e8e8e8; /* + */
+	--text: #212226; /* + */
+	--switch: #1b7b98; /* + */
+	--block: #fbfbfb; /* + */
+	--block-menu:#1b7b98; /* + */
+	--switch-menu: #055475; /* + */
+	--name: #1b7b98; /* + */
+	--hover: #1b7b98; /* + */
+	--menu: #009ee0; /* + */
 	/* --menu-hover: #057fb3; */
-	--text-menu: #fbfbfb;
-	--sub-menu: #057fb3;
-	--sub-text: #222;
-	--sub-menu-hover: #035172;
+	--text-menu: #fbfbfb; /* + */
+	--sub-menu: #057fb3; /* + */
+	--sub-text: #222; /* + */
+	--sub-menu-hover: #035172; /* + */
 	--text-news: #fbfbfb;
 	--text-news-hover: #c78282;
 	--news-footer: #009ee0;
@@ -162,6 +199,55 @@ h1, h2, h3, h4, h5, h6 {
 header {
 	background-color: var(--block);
 	padding: 15px 0px;
+}
+.wp-story-fullscreen.wp-story-container {
+	max-width: 550px!important;
+	max-block-size: 550px!important;
+}
+.uk-navbar-nav>li>.header_info {
+	min-height: 50px!important;
+	min-block-size: 50px!important;
+	background-color: var(--sub-menu)!important;
+	transition: 0.25s ease;
+}
+.uk-navbar-nav>li>.header_info:hover {
+	background-color: var(--bg-canvas)!important;;
+}
+.uk-navbar-left .uk-navbar-dropdown {
+	border-radius: 10px;
+	padding: 0px;
+	width: 350px;
+	inline-size: 350px;
+	overflow:hidden;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 35%), 0 2px 4px -1px rgb(0 0 0 / 15%);
+}
+.uk-navbar-left .uk-navbar-dropdown li a {
+	padding: 15px 25px;
+	transition: 0.3s ease;
+}
+.uk-navbar-left .uk-navbar-dropdown li:hover{
+	background-color: var(--block-menu);
+}
+.uk-navbar-left .uk-navbar-dropdown li:before{
+	font-family: FontAwesome;
+	content: "\f0da";
+	position: absolute;
+	left: -30px;
+	transition: all 200ms ease;
+	font-size: 18px;
+	color: var(--text-menu);
+	transition: 0.3s all;
+	padding: 12px;
+}
+.uk-navbar-left .uk-navbar-dropdown li:hover:before {
+	left: 0px;
+}
+.uk-navbar-dropdown-nav>li.uk-active>a, .uk-navbar-dropdown-nav>li>a {
+	color: var(--text);
+	transition: 0.3 all;
+}
+.uk-navbar-dropdown-nav>li.uk-active>a:hover, .uk-navbar-dropdown-nav>li>a:hover {
+	color: var(--news-body);
 }
 .logo {
 	block-size: 80px;
@@ -235,7 +321,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 .sub-menu {
 	display: none;
 	position: absolute;
-  font-size: 12px;
+  	font-size: 12px;
 	z-index: 2;
 	list-style: none;
 	padding: 0px;
@@ -270,9 +356,9 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 .uk-search-input {
 	color: var(--text);
 }
-.current-menu-parent, .current_page_item {
-	background-color: var(--switch);
-}
+/*.current-menu-parent, .current_page_item {*/
+/*	background-color: var(--switch);*/
+/*}*/
 .uk-navbar ul > .menu-item-has-children > a:after {
 	font: normal normal normal 16px/1 FontAwesome;
 	display: inline-block;
@@ -289,7 +375,6 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	margin-block-end: 20px!important;
 	margin-bottom: 20px!important;
 }
-
 .c-icon a {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -297,13 +382,30 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--text-menu);
 	display: flex;
 	align-items: center;
-	padding: 20px 20px;
+	padding: 30px 20px;
+	overflow:hidden;
+}
+.c-icon a:after {
+	font-family: FontAwesome;
+	content:"\f061";
+	position: absolute;
+	top: 28px;
+	right: -30px;
+	transition: all 200ms ease;
+	font-size: 18px;
+	color: var(--text-menu);
+}
+.c-icon a:hover:after {
+	right: 25px;
 }
 .c-icon a div {
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	inline-size: 100%;
+}
+.c-icon .current_page_item a {
+
 }
 .u-card-s:hover , .u-card-s:focus {
 	background-color: var(--switch-menu);
@@ -321,6 +423,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	padding: 30px 25px;
 	display: flex;
 	align-items: center;
+	border-radius: 10px;
 }
 .uk-card-media-top a:hover {
 	color: var(--text-menu);
@@ -336,10 +439,10 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 }
 .s-span span svg {
 	color: var(--text-news)!important;
-	inline-size: 25px;
-	width: 25px;
-	block-size: 25px;
-	height: 25px;
+	inline-size: 22px;
+	width: 22px;
+	block-size: 22px;
+	height: 22px;
 }
 .views {
 	display: flex;
@@ -350,7 +453,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--text-news);
 	transition: 0.25s ease;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-	border-radius: 2px!important;
+	border-radius: 10px!important;
 }
 .uk-label-site {
 	background-color: var(--date-news)!important;
@@ -381,6 +484,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--text);
 	transition: 0.25s ease;
 	text-decoration: none;
+	border-radius: 10px;
 }
 .txt a {
 	transition: 0.25s ease;
@@ -429,10 +533,10 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--nav-button)!important;
 }
 .nav-slider .uk-position-center-left svg, .nav-slider .uk-position-center-right svg{
-	inline-size: 25px;
-	width: 25px;
-	block-size: 25px;
-	height: 25px;
+	inline-size: 22px;
+	width: 22px;
+	block-size: 22px;
+	height: 22px;
 }
 /*.nav-slider .uk-position-center-right:hover , .nav-slider .uk-position-center-left:hover {
 	background-color: var(--hover);
@@ -485,10 +589,13 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	width: 100%;
 }
 .uk-card-media-left .uk-cover {
-	inline-size: 101%;
-	width: 101%;
-	min-block-size: 101%;
-	min-height: 101%;
+	inline-size: 100%;
+	width: 100%;
+	min-block-size: 100%;
+	min-height: 100%;
+}
+.uk-card-media-left {
+	border-radius: 10px 0px 0px 10px;
 }
 .uk-transition-scale-up {
 	transform: scale(1.01, 1);
@@ -517,6 +624,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
+	border-radius: 5px;
 }
 .p-li span , .p-li a {
 	text-align: center;
@@ -680,9 +788,9 @@ footer .menu li a:hover {
 .uk-offcanvas-bar .menu-item-home{
 	text-align: center;
 }
-.uk-offcanvas-bar > ul >  .current-menu-parent, .current_page_item {
-	background-color: var(--bg-canvas);
-}
+/*.uk-offcanvas-bar > ul >  .current-menu-parent, .current_page_item {*/
+/*	background-color: var(--bg-canvas);*/
+/*}*/
 .mobile-menu {
 	background-color: var(--menu);
 	display: flex;
@@ -772,7 +880,7 @@ footer .current_page_item {
 }
 .page_content {
 	background-color: var(--block);
-	border-radius: 2px;
+	border-radius: 0px 0px 10px 10px;
 	color: var(--page-content)!important;
 	padding: 40px 10px;
 	margin: 0;
@@ -912,9 +1020,14 @@ span.post-date {
 	transition: 0.3s ease;
 	color: var(--text-menu);
 	font-family: 'Roboto Condensed Regular', sans-serif;
+
+}
+.backsite {
+	border-radius: 10px 0px 0px 0px;
 }
 .print {
 	padding: 20px 10px;
+	border-radius: 0px 10px 0px 0px;
 }
 .backsite:hover {
 	background-color: var(--copy-hover);
@@ -940,7 +1053,7 @@ span.post-date {
 	font-family: 'Roboto Condensed Bold', sans-serif;
 	position: absolute;
     z-index: inherit;
-    bottom: 40px;
+    bottom: 50px;
     left: 30px;
 }
 .bg-color {
@@ -954,6 +1067,7 @@ span.post-date {
 }
 .post-content {
 	padding: 20px;
+	border-radius: 0px 0px 10px 10px;
 }
 .uk-card-badge-post-date, .uk-card-badge-post-views {
     position: absolute;
@@ -1071,6 +1185,7 @@ span.post-date {
 	min-inline-size: 100%;
 	width: 100%;
 	inline-size: 100%;
+	border-radius: 10px 10px 0px 0px;
 }
 #true_loadmore, .all_info {
 	width: 100%;
@@ -1080,7 +1195,7 @@ span.post-date {
 	background-color: var(--menu);
 	text-transform: uppercase;
 	cursor: pointer;
-	border-radius: 2px;
+	border-radius: 10px;
 	color: var(--text-news);
 	transition: 0.25s ease;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
@@ -1159,7 +1274,7 @@ span.post-date {
 	display: flex;
 	text-decoration: none;
 	font-weight: bold;
-	border-radius: 2px;
+	border-radius: 10px;
 	text-transform: uppercase;
 	font-size: 18px;
 	font-family: 'Open Sans Condensed Bold', sans-serif;
@@ -1174,7 +1289,7 @@ span.post-date {
 	background-color: var(--switch-menu);
 } 
 .photoalbum-title {
-	font-size: 14px!important;
+	font-size: 12px!important;
 }
 .p-album {
 	padding: 30px 20px!important;
@@ -1540,5 +1655,8 @@ html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .uk-slider 
 		padding: 12px!important;
 		font-size: 13px!important;
 	}
+	 .box-switch .switch {
+		 display: none;
+	 }
  }
 /* Конец Адаптации под различные устройства */

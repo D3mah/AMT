@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Русская тема Wordpress для образовательных организаций</title>
+    <link rel="stylesheet" href="assets/css/fullpage.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/uikit.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/uikit-rtl.min.css" type="text/css" >
+    <link rel="stylesheet" href="assets/fonts/fonts.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="assets/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="assets/js/fullpage.min.js" type="text/javascript"></script>
+</head>
+<body style="margin: 0px;">
+
+    <div id="fullpage">
+        <ul id="menu">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div class="section">Определённый раздел 1</div>
+        <div class="section">Определённый раздел 2</div>
+        <div class="section">Определённый раздел 3</div>
+    </div>
+
+    <script>
+        $('#fullpage').fullpage({
+            // Навигация
+            licenseKey: 'nope',
+            menu: '#menu',
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['Главная', 'Вторая', 'Третья'],
+            showActiveTooltip: true,
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom',
+            anchors:['Главная', 'Вторая', 'Третья'], // Линки для ссылок
+
+            // Дизайн
+            sectionsColor: ['#3581ab', '#4BBFC3', '#7BAABE' ], // Цвет слайдов
+            verticalCentered: true,
+            fixedElements: '#header, .footer',
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+
+            // Скроллинг
+            easing: 'easeOutBounce',
+            autoScrolling:true,
+            loopTop: false,
+            loopBottom: true,
+            loopHorizontal: true,
+
+            //Доступ
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+
+            // Селекторы
+            lazyLoading: true
+
+
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/8cea7a5a56.js" type="text/javascript"></script>
+    <script src="assets/js/uikit.min.js" type="text/javascript"></script>
+    <script src="assets/js/uikit-icons.min.js" type="text/javascript"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
+</body>
+</html>
