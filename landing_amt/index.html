@@ -5,53 +5,93 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Русская тема Wordpress для образовательных организаций</title>
-    <link rel="stylesheet" href="assets/css/fullpage.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/uikit.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/uikit-rtl.min.css" type="text/css" >
+    <link rel="stylesheet" href="assets/css/fullpage.min.css" type="text/css">
     <link rel="stylesheet" href="assets/fonts/fonts.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="assets/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="assets/js/fullpage.min.js" type="text/javascript"></script>
 </head>
-<body style="margin: 0px;">
+<body>
+
+
+
+
+    <ul id="amtMenu" class="uk-navbar-nav">
+        <li data-menuanchor="Шаблон" class="active"><a href="#Шаблон" class="header_info">Главная</a></li>
+        <li data-menuanchor="Тема"><a href="#Тема" class="header_info">Тема Wordpress</a></li>
+        <li data-menuanchor="Функционал"><a href="#Функционал" class="header_info">Функционал</a></li>
+        <li data-menuanchor="Установка"><a href="#Установка" class="header_info">Установка</a></li>
+        <li data-menuanchor="Плагины"><a href="#Плагины" class="header_info">Плагины</a></li>
+        <li data-menuanchor="Настройка"><a href="#Настройка" class="header_info">Настройка</a></li>
+        <li data-menuanchor="Вопросы"><a href="#Вопросы" class="header_info">Вопросы</a></li>
+    </ul>
+
 
     <div id="fullpage">
-        <ul id="menu">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-        <div class="section">Определённый раздел 1</div>
-        <div class="section">Определённый раздел 2</div>
-        <div class="section">Определённый раздел 3</div>
+        <div class="section active">
+
+            <div class="uk-container">
+                <div uk-grid>
+                    <div class="uk-width-1-2@m name_site">
+                        <h1 class="name_theme">AMTHEME 2</h1>
+                        <p class="all_text">Русская Wordpress тема для образовательных организаций.</p>
+                        <p uk-margin>
+                            <a href="https://алмт.рф" class="link uk-button-large uk-button-danger" target="_blank">Демо Сайт</a>
+                            <a class="link uk-button-large uk-button-default">Скачать</a>
+                        </p>
+                    </div>
+                    <div class="uk-width-1-2@m">
+                        <img data-src="assets/img/photo_1.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class='icon-scroll'></div>
+        </div>
+        <div class="section">Определенный раздел 2
+            <div class='icon-scroll'></div>
+        </div>
+        <div class="section">Определённый раздел 3
+            <div class='icon-scroll'></div>
+        </div>
+        <div class="section">Определённый раздел 4
+            <div class='icon-scroll'></div>
+        </div>
+        <div class="section">Определённый раздел 5
+            <div class='icon-scroll'></div>
+        </div>
+        <div class="section">Определённый раздел 6
+            <div class='icon-scroll'></div>
+        </div>
+        <div class="section">Определённый раздел 7
+            <div class='icon-scroll'></div>
+        </div>
     </div>
 
     <script>
         $('#fullpage').fullpage({
             // Навигация
             licenseKey: 'nope',
-            menu: '#menu',
+            menu: '#amtMenu',
             navigation: true,
             navigationPosition: 'right',
-            navigationTooltips: ['Главная', 'Вторая', 'Третья'],
+            navigationTooltips: ['Главная', 'Тема Wordpress - AMT', 'Функционал', 'Установка', 'Рекомендуемые плагины', 'Настройка темы', 'Вопросы'],
             showActiveTooltip: true,
-            slidesNavigation: true,
+            slidesNavigation: false,
             slidesNavPosition: 'bottom',
-            anchors:['Главная', 'Вторая', 'Третья'], // Линки для ссылок
+            anchors:['Шаблон', 'Тема', 'Функционал', 'Установка', 'Плагины', 'Настройка', 'Вопросы'], // Линки для ссылок
 
             // Дизайн
-            sectionsColor: ['#3581ab', '#4BBFC3', '#7BAABE' ], // Цвет слайдов
-            verticalCentered: true,
+            sectionsColor: ['#3581ab', '#4BBFC3', '#7BAABE', '#3581ab', '#4BBFC3', '#7BAABE', '#3581ab' ], // Цвет слайдов
             fixedElements: '#header, .footer',
-            responsiveWidth: 0,
-            responsiveHeight: 0,
 
             // Скроллинг
             easing: 'easeOutBounce',
             autoScrolling:true,
             loopTop: false,
             loopBottom: true,
-            loopHorizontal: true,
 
             //Доступ
             keyboardScrolling: true,
