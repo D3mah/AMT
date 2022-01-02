@@ -9,7 +9,7 @@
 <?php
 $posts = get_posts( array(
 	'numberposts' => 6,
-	'post_type'   => 'photo',
+	'post_type'   => 'stories',
 	'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
 ) );
 ?>
