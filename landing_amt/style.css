@@ -6,6 +6,11 @@ body {
 }
 i {
     color: #fff;
+    transition: 0.25s ease;
+}
+i:hover {
+    color: #e97e7e;
+    cursor: pointer;
 }
 .link {
     cursor: pointer!important;
@@ -48,10 +53,10 @@ i {
     margin: auto;
 }
 .slide_2 {
-    width: 400px;
+    width: auto;
     height: 350px;
     block-size: 350px;
-    inline-size: 400px;
+    inline-size: auto;
     margin: 20px;
 }
 .uk-text-small {
@@ -59,6 +64,15 @@ i {
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
+}
+.color_red {
+    color: #ef3f3f;
+    text-decoration: underline;
+}
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* Animation Scroll Start */
 .icon-scroll, .icon-scroll:before {
