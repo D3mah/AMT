@@ -30,6 +30,7 @@
 
 
     <div id="fullpage">
+        <!-- 1 -->
         <div class="section active">
 
             <div class="uk-container">
@@ -50,10 +51,76 @@
 
             <div class='icon-scroll'></div>
         </div>
-        <div class="section">Определенный раздел 2
+        <!--    2    -->
+        <div class="section">
+            <div class="uk-container">
+                <div uk-grid style="text-align: center;">
+                    <div class="uk-width-1-1">
+                        <h2 class="uk-heading-medium all_text">Тема Wordpress - AMTHEME 2</h2>
+                    </div>
+                    <div class="uk-width-1-3@m uk-animation-toggle">
+                        <div class="photo_amtheme2 uk-animation-shake">
+                            <img class="slide_2" data-src="assets/img/photo_2-1.png">
+                            <div class="uk-text-small">Подойдет для администраторов образовательных сайтов и начинающим веб-разработчикам</div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-animation-toggle">
+                        <div class="photo_amtheme2 uk-animation-shake">
+                            <img class="slide_2" data-src="assets/img/photo_2-2.png">
+                            <div class="uk-text-small">Позволяет создать сайт соответствующий требованиям действующего законодательства</div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-animation-toggle">
+                        <div class="photo_amtheme2 uk-animation-shake">
+                            <img class="slide_2" data-src="assets/img/photo_2-4.png">
+                            <div class="uk-text-small">Поддерживает все современные браузеры</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class='icon-scroll'></div>
         </div>
-        <div class="section">Определённый раздел 3
+        <!--    3    -->
+        <div class="section">
+            <div class="uk-container">
+                <div uk-grid>
+                    <div class="uk-width-1-1">
+                        <h2 class="uk-heading-medium all_text" style="text-align: center;">Функционал</h2>
+                    </div>
+                    <div class="uk-width-1-4@m flex_center"><i class="fab fa-uikit fa-6x"></i></div>
+                    <div class="uk-width-3-4@m">
+                        <h2 class="all_text color_red">Wordpress 5.0+ & GetUikit 3</h2>
+                        <p class="uk-text-small" style="text-transform: none;">Тема разрабатывалась под версию Wordpress 5.0 и выше.
+                            В верстке использован GetUikit 3 — это новейшая версия фреймворка, которая является наиболее популярной платформой HTML, CSS и JavaScript
+                            для разработки адаптивных сайтов.
+                            Рекомендуемая версия PHP 7.0 и выше, это обусловлено системными требованиями Wordpress.
+                            Не забывайте, что <a href="docs/2_rus_server.pdf" class="color_red" target="_blank">одним из требований к сайтам образовательных организации является расположение сервера на территории РФ</a>.
+                        </p>
+                    </div>
+
+                    <div class="uk-width-1-4@m flex_center"><i class="far fa-eye fa-6x"></i></div>
+                    <div class="uk-width-3-4@m">
+                        <h2 class="all_text color_red">Версия сайта для слабовидящих</h2>
+                        <p class="uk-text-small" style="text-transform: none;">Соответствует стандартам WCAG 2.0 (W3 Web Content Accessibility Guidelines), WAI-ARIA (Web Accessibility Initiative — Accessible Rich Internet Applications),
+                            <a href="docs/5_eye.pdf" class="color_red" target="_blank">ГОСТ Р 52872-2019.</a>
+                            Вывод альтернативного описания при отключении изображений (берутся из атрибута alt – не забываем заполнять).
+                            Увеличение шрифта от 100% до 200%. Регулировка отступов между строками и кернинга (отступов между буквами).
+                            Шрифт с засечками и без засечек. Режим черно-белых изображений. Четыре цветовых схемы.</p>
+                    </div>
+
+                    <div class="uk-width-1-4@m flex_center"><i class="fas fa-code fa-6x"></i></div>
+                    <div class="uk-width-3-4@m">
+                        <h2 class="all_text color_red">Функционал темы</h2>
+                        <p class="uk-text-small" style="text-transform: none;">
+                            Имеет версию для слабовидящих, навигацию (хлебные крошки), поиск по сайту. Имеется удобный "Архив Записей", записи можно отфильтровать.
+                            Раздел "Фотогалерея", в котором можно разместить фотографии с мероприятий и.т.д. Дополнительные разделы, которые можно вывести на главную страницу
+                            сайта (Например: Анонсы, Приказы и.т.д)
+                            Есть встроенный генератор карты сайта и возможность вывода страницы с html версией карты сайта. Модуль вывода популярных публикаций
+                            (вместо него можно выводить любой произвольный виджет).
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class='icon-scroll'></div>
         </div>
         <div class="section">Определённый раздел 4
@@ -84,19 +151,18 @@
             anchors:['Шаблон', 'Тема', 'Функционал', 'Установка', 'Плагины', 'Настройка', 'Вопросы'], // Линки для ссылок
 
             // Дизайн
-            sectionsColor: ['#3581ab', '#4BBFC3', '#7BAABE', '#3581ab', '#4BBFC3', '#7BAABE', '#3581ab' ], // Цвет слайдов
+            sectionsColor: ['#72aef8', '#3581ab', '#4998b8', '#3581ab', '#72aef8', '#3581ab', '#4998b8' ], // Цвет слайдов
             fixedElements: '#header, .footer',
 
             // Скроллинг
-            easing: 'easeOutBounce',
             autoScrolling:true,
             loopTop: false,
             loopBottom: true,
 
             //Доступ
             keyboardScrolling: true,
-            animateAnchor: true,
-            recordHistory: true,
+             animateAnchor: true,
+             recordHistory: true,
 
             // Селекторы
             lazyLoading: true

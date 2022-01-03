@@ -4,6 +4,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+i {
+    color: #fff;
+    transition: 0.25s ease;
+}
+i:hover {
+    color: #e97e7e;
+    cursor: pointer;
+}
 .link {
     cursor: pointer!important;
     padding: 20px 50px;
@@ -41,8 +49,30 @@ body {
 .all_text {
     font-size: 28px;
 }
-.name_site {
+.name_site, .margin_auto {
     margin: auto;
+}
+.slide_2 {
+    width: auto;
+    height: 350px;
+    block-size: 350px;
+    inline-size: auto;
+    margin: 20px;
+}
+.uk-text-small {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.color_red {
+    color: #ef3f3f;
+    text-decoration: underline;
+}
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* Animation Scroll Start */
 .icon-scroll, .icon-scroll:before {
@@ -50,7 +80,6 @@ body {
     left: 50%;
     bottom: 5%;
 }
-
 .icon-scroll {
     width: 40px;
     height: 70px;
