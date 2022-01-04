@@ -100,7 +100,10 @@ i:hover {
     animation-iteration-count: infinite;
     animation-name: scroll;
 }
-
+.head_text {
+    color: #fff;
+    font-size: 24px;
+}
 @keyframes scroll {
     0% {
         opacity: 1;

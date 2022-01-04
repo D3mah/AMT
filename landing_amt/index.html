@@ -19,11 +19,11 @@
 
 
     <ul id="amtMenu" class="uk-navbar-nav">
-        <li data-menuanchor="Шаблон" class="active"><a href="#Шаблон" class="header_info">Главная</a></li>
+        <li data-menuanchor="Главная" class="active"><a href="#Главная" class="header_info">Главная</a></li>
         <li data-menuanchor="Тема"><a href="#Тема" class="header_info">Тема Wordpress</a></li>
         <li data-menuanchor="Функционал"><a href="#Функционал" class="header_info">Функционал</a></li>
-        <li data-menuanchor="Установка"><a href="#Установка" class="header_info">Установка</a></li>
         <li data-menuanchor="Плагины"><a href="#Плагины" class="header_info">Плагины</a></li>
+        <li data-menuanchor="Установка"><a href="#Установка" class="header_info">Установка</a></li>
         <li data-menuanchor="Настройка"><a href="#Настройка" class="header_info">Настройка</a></li>
         <li data-menuanchor="Вопросы"><a href="#Вопросы" class="header_info">Вопросы</a></li>
     </ul>
@@ -115,15 +115,45 @@
                             Имеет версию для слабовидящих, навигацию (хлебные крошки), поиск по сайту. Имеется удобный "Архив Записей", записи можно отфильтровать.
                             Раздел "Фотогалерея", в котором можно разместить фотографии с мероприятий и.т.д. Дополнительные разделы, которые можно вывести на главную страницу
                             сайта (Например: Анонсы, Приказы и.т.д)
-                            Есть встроенный генератор карты сайта и возможность вывода страницы с html версией карты сайта. Модуль вывода популярных публикаций
-                            (вместо него можно выводить любой произвольный виджет).
+                            Есть встроенный генератор карты сайта и возможность вывода страницы с html версией карты сайта.
+                            <a href="docs/4_people.pdf" class="color_red" target="_blank">Имеется возможность подключить форму "Обращения граждан", необходимый раздел, который должен располагаться на сайте согласно Федеральному закону №355 от 27 ноября 2017 года.</a>
+                            Структура сайта должна отвечать методическим рекомендациям описанным в <a href="docs/8_rus.pdf" class="color_red" target="_blank">Приказе Рособрнадзоре от 14.08.2020 (изм. от 07.05.2021) №831</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class='icon-scroll'></div>
         </div>
-        <div class="section">Определённый раздел 4
+        <!--    4    -->
+        <div class="section">
+            <div class="uk-container">
+                <div uk-grid>
+                    <div class="uk-width-1-1">
+                        <h2 class="uk-heading-medium all_text" style="text-align: center;">Рекомендуемые плагины</h2>
+                        <p class="head_text" style="text-align: center;">Wordpress занимает первое место по популярности среди бесплатных CMS. В официальном репозитории вы можете скачать огромное количество плагинов (расширений). Рекомендуемый список плагинов для нашей темы приведен ниже.</p>
+                    </div>
+                    <div class="uk-card uk-card-primary uk-card-body uk-width-1-3@m">
+                        <h3 class="uk-card-title">Duplicator</h3>
+                        <p>Это многофункциональный инструмент, который позволяет вам перемещать, переносить и клонировать ваш сайт — или вы можете просто скопировать его, чтобы создать резервную копию. Более того, Duplicator является гибким, простым в использовании и очень надежным.</p>
+                    </div>
+                    <div class="uk-card uk-card-primary uk-card-body uk-width-1-3@m">
+                        <h3 class="uk-card-title">WP Translitera</h3>
+                        <p>Плагин преобразует кириллические символы в латинские в ярлыках (URL-ссылках) записей, страниц, терминов, а также в именах файлов вложений. Пригодится для создания удобочитаемых URL-адресов.</p>
+                    </div>
+                    <div class="uk-card uk-card-primary uk-card-body uk-width-1-3@m">
+                        <h3 class="uk-card-title">Smart Slider 3</h3>
+                        <p>Бесплатный адаптивный слайдер изображений и видео, который отлично работает на всех основных устройствах</p>
+                    </div>
+                    <div class="uk-card uk-card-primary uk-card-body uk-width-1-3@m">
+                        <h3 class="uk-card-title">TablePress</h3>
+                        <p>Плагин для создания красивых и многофункциональных таблиц на страницах вашего сайта, без необходимости написания кода.</p>
+                    </div>
+                    <div class="uk-card uk-card-primary uk-card-body uk-width-1-3@m">
+                        <h3 class="uk-card-title">Button visually impaired</h3>
+                        <p>Button visually impaired — это плагин, который автоматически изменяет версию вашего сайта для слабовидящих людей. Панель на сайте для слабовидящих дает возможность изменять цветовую гамму сайта, размеры шрифтов, синтезатор речи озвучит вслух изменения настроек. С помощью неё можно изменять функции сайта, которые удовлетворят потребностями людей с ограниченными возможностями.</p>
+                    </div>
+                </div>
+            </div>
             <div class='icon-scroll'></div>
         </div>
         <div class="section">Определённый раздел 5
@@ -144,11 +174,11 @@
             menu: '#amtMenu',
             navigation: true,
             navigationPosition: 'right',
-            navigationTooltips: ['Главная', 'Тема Wordpress - AMT', 'Функционал', 'Установка', 'Рекомендуемые плагины', 'Настройка темы', 'Вопросы'],
-            showActiveTooltip: true,
+            navigationTooltips: ['Главная', 'Тема Wordpress - AMT', 'Функционал', 'Рекомендуемые плагины', 'Установка', 'Настройка темы', 'Вопросы'],
+            showActiveTooltip: false,
             slidesNavigation: false,
             slidesNavPosition: 'bottom',
-            anchors:['Шаблон', 'Тема', 'Функционал', 'Установка', 'Плагины', 'Настройка', 'Вопросы'], // Линки для ссылок
+            anchors:['Главная', 'Тема', 'Функционал', 'Плагины', 'Установка', 'Настройка', 'Вопросы'], // Линки для ссылок
 
             // Дизайн
             sectionsColor: ['#72aef8', '#3581ab', '#4998b8', '#3581ab', '#72aef8', '#3581ab', '#4998b8' ], // Цвет слайдов
