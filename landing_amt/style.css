@@ -12,16 +12,6 @@ i:hover {
     color: #e97e7e;
     cursor: pointer;
 }
-.link {
-    cursor: pointer!important;
-    padding: 20px 50px;
-    transition: 0.25s ease;
-    border-radius: 4px;
-}
-.link:hover {
-    text-decoration: none!important;
-    background-color: #640202;
-}
 .uk-container {
     max-width: 1600px!important;
     max-inline-size: 1600px!important;
@@ -73,6 +63,12 @@ i:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.buttons {
+    display: flex;
+}
+.margin_buttons {
+    margin-right: 15px;
 }
 /* Animation Scroll Start */
 .icon-scroll, .icon-scroll:before {
