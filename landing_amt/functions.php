@@ -46,9 +46,9 @@ function sidebars(){
         'after_title'   => null
     ));
     register_sidebar( array(
-        'name'          => 'Второй слайд',
+        'name'          => 'Второй слайд [Временно отключен]',
         'id'            => "2_slide",
-        'description'   => '2 Слайд',
+        'description'   => '2 Слайд [Временно отключен]',
         'before_widget' => null,
         'after_widget'  => null,
         'before_title'  => null,
