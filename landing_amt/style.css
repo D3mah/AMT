@@ -12,6 +12,14 @@ i:hover {
     color: #e97e7e;
     cursor: pointer;
 }
+a {
+    color: #000;
+    transition: 0.3s ease!important;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
 .uk-container {
     max-width: 1600px!important;
     max-inline-size: 1600px!important;
@@ -50,14 +58,10 @@ i:hover {
     margin: 20px;
 }
 .uk-text-small {
-    color: #fff;
+    color: #fff!important;
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
-}
-.color_red {
-    color: #ef3f3f;
-    text-decoration: underline;
 }
 .flex_center {
     display: flex;
@@ -67,8 +71,15 @@ i:hover {
 .buttons {
     display: flex;
 }
-.margin_buttons {
+.so-widget-sow-button {
     margin-right: 15px;
+}
+.image_slide {
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
 }
 /* Animation Scroll Start */
 .icon-scroll, .icon-scroll:before {
