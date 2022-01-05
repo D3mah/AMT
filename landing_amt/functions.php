@@ -8,6 +8,7 @@
 
 
 function style_header() {
+    wp_enqueue_style ('filesSite', get_template_directory_uri() .'/assets/css/files.css');
 	wp_enqueue_style ('getUikit', get_template_directory_uri() .'/assets/css/uikit.min.css');
 	wp_enqueue_style ('getUikitRtl', get_template_directory_uri() .'/assets/css/uikit-rtl.min.css');
 	wp_enqueue_style ('fullPage', get_template_directory_uri() .'/assets/css/fullpage.min.css');

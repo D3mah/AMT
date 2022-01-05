@@ -1,0 +1,267 @@
+table .column-2 a[href^="http://"]:not([data-lightbox-type="image"])::before,table .column-2 a[href^="https://"]:not([data-lightbox-type="image"])::before,.page_content a[href^="http://"]:not([data-lightbox-type="image"])::before,.page_content a[href^="https://"]:not([data-lightbox-type="image"])::before,.r-column a[href^="http://"]:not([data-lightbox-type="image"])::before,.r-column a[href^="https://"]:not([data-lightbox-type="image"])::before, .r-column a[href^="https://"]:not(.a-imp-news::before), .r-column a[href^="http://"]:not(.a-imp-news::before)
+{
+	background: url('../img/icons/link.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+table a[href^="https://"]::before, table a[href^="http://"]::before {
+	background: url('../img/icons/link.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".pdf"]::before, a[href$=".PDF"]::before
+{
+	background: url('../img/icons/pdf.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".xls"]::before, a[href$=".XLS"]::before,a[href$=".xlsx"]::before,a[href$=".XLSX"]::before
+{
+	background: url('../img/icons/excel.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".doc"]::before, a[href$=".DOC"]::before,a[href$=".docx"]::before,a[href$=".DOCX"]::before,a[href$=".rtf"]::before,a[href$=".RTF"]::before
+{
+	background: url('../img/icons/word.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".ppt"]::before, a[href$=".pptx"]::before,a[href$=".PPT"]::before,a[href$=".PPTX"]::before
+{
+	background: url('../img/icons/powerpoint.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".rar"]::before, a[href$=".RAR"]::before,a[href$=".zip"]::before,a[href$=".ZIP"]::before,a[href$=".7z"]::before,a[href$=".7Z"]::before
+{
+	background: url('../img/icons/archive.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".ai"]::before, a[href$=".AI"]::before
+{
+	background: url('../img/icons/ai.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".jpg"]:not([data-lightbox-type="image"])::before, a[href$=".JPG"]:not([data-lightbox-type="image"])::before,a[href$=".jpeg"]:not([data-lightbox-type="image"])::before,a[href$=".JPEG"]:not([data-lightbox-type="image"])::before,a[href$=".png"]:not([data-lightbox-type="image"])::before,a[href$=".PNG"]:not([data-lightbox-type="image"])::before
+{
+	background: url('../img/icons/image.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+.jp-carousel-image-download::before
+{
+	display: none!important;
+}
+a[href$=".mp3"]::before, a[href$=".MP3"]::before,a[href$=".ac3"]::before,a[href$=".AC3"]::before,a[href$=".aif"]::before,a[href$=".AIF"]::before,a[href$=".amr"]::before, a[href$=".AMR"]::before,a[href$=".iff"]::before,a[href$=".IFF"]::before,a[href$=".m3u"]::before,a[href$=".M3U"]::before,a[href$=".m4a"]::before,a[href$=".M4A"]::before,a[href$=".mpa"]::before,a[href$=".MPA"]::beforea[href$=".ogg"]::before,a[href$=".OGG"]::before,a[href$=".wav"]::before,a[href$=".WAV"]::before
+{
+	background: url('../img/icons/music.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+a[href$=".3gp"]::before, a[href$=".3GP"]::before,a[href$=".avi"]::before,a[href$=".AVI"]::before,a[href$=".m4v"]::before,a[href$=".M4V"]::before,a[href$=".mp4"]::before, a[href$=".MP4"]::before,a[href$=".mpeg"]::before,a[href$=".MPEG"]::before,a[href$=".m3u"]::before,a[href$=".webm"]::before,a[href$=".WEBM"]::before,a[href$=".wmv"]::before,a[href$=".WMV"]::before
+{
+	background: url('../img/icons/video.svg') no-repeat center;
+	block-size: 25px;
+	content: "";
+	display: inline-block;
+	height: 25px;
+	inline-size: 25px;
+	margin-inline-end: 5px;
+	margin-right: 5px;
+	width: 25px;
+}
+.bottom-icon .security a::before, .bottom-icon .help a::before, .bottom-icon .work a::before, .bottom-icon .book a::before,.bottom-icon .contact a::before, .bottom-icon .imp a::before,.bottom-icon .education a::before
+{
+	color: var(--text-news);
+	font: normal normal normal 44px/1 FontAwesome;
+	margin: 0px 5px;
+	text-align: center;
+}
+.bottom-icon .security a::before
+{
+	top: 22px;
+	left: -75px;
+	content: "\f505";
+	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .security a:hover::before
+{
+	left: 20px;
+}
+.bottom-icon .help a::before
+{
+	top: 22px;
+	left: -75px;
+	content: "\f4c4";
+	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .help a:hover::before
+{
+	left: 20px;
+}
+.bottom-icon .work a::before
+{
+	top: 22px;
+	left: -75px;
+	content: "\f0b1";
+	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .work a:hover::before
+{
+	left: 20px;
+}
+.bottom-icon .book a::before
+{
+	top: 22px;
+	left: -75px;
+	content: "\f518";
+	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .book a:hover::before
+{
+	left: 20px;
+}
+.bottom-icon .contact a::before
+{
+	top: 22px;
+	left: -75px;
+	content: "\f2bb";
+	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .contact a:hover::before
+{
+	left: 20px;
+}
+.bottom-icon .imp a::before
+{
+	top: 22px;
+	left: -75px;
+	content: "\f071";
+	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .imp a:hover::before
+{
+	left: 20px;
+}
+.bottom-icon .education a::before
+{
+	top: 22px;
+	left: -75px;
+	content: "\f19d";
+	display: block;
+	position: absolute;
+	transition: all 200ms ease;
+}
+.bottom-icon .education a:hover::before
+{
+	left: 20px;
+}
+ @media (max-width: 1480px) {
+	.bottom-icon .education a::before, .bottom-icon .imp a::before, .bottom-icon .contact a::before, .bottom-icon .book a::before, .bottom-icon .work a::before, .bottom-icon .help a::before, .bottom-icon .security a::before {
+		font-size: 24px;
+		top: 26px;
+	}
+	.bottom-icon a div {
+		font-size: 13px!important
+	}
+	 .c-icon a:after {
+		 top: 26px!important;
+	 }
+	 .bottom-icon .imp a::before {
+		 top: 27px;
+	 }
+ }
+  @media (max-width: 1196px) {
+	  	.bottom-icon .education a::before, .bottom-icon .imp a::before, .bottom-icon .contact a::before, .bottom-icon .book a::before, .bottom-icon .work a::before, .bottom-icon .help a::before, .bottom-icon .security a::before {
+		display: block;
+	}
+  }
+@media (max-width: 959px) {
+	.bottom-icon a div {
+		font-size: 16px!important
+	}
+	.bottom-icon .education a::before, .bottom-icon .imp a::before, .bottom-icon .contact a::before, .bottom-icon .book a::before, .bottom-icon .work a::before, .bottom-icon .help a::before, .bottom-icon .security a::before {
+		font-size: 40px;
+		top: 22px;
+	}
+	.c-icon a:after {
+		top: 26px!important;
+		font-size: 22px!important;
+	}
+
+}
