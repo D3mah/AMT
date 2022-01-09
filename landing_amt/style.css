@@ -17,6 +17,10 @@ a {
     transition: 0.3s ease!important;
     text-decoration: underline;
 }
+table {
+    display: block;
+    overflow: auto;
+}
 a:hover {
     text-decoration: none;
 }
@@ -24,7 +28,11 @@ a:hover {
     max-width: 1600px!important;
     max-inline-size: 1600px!important;
 }
-
+.cardtheme {
+    height: 250px;
+    block-size: 250px;
+    overflow: auto;
+}
 #amtMenu {
     position: fixed;
     top: 20px;
@@ -57,6 +65,7 @@ a:hover {
     max-height: 350px;
     max-block-size: 350px;
     inline-size: auto;
+    margin: 20px 0px;
 }
 .flex_plug{
     height: 450px;
@@ -89,6 +98,7 @@ a:hover {
     background: white;
     padding: 20px;
     border-radius: 25px;
+    margin: 20px 0px;
 }
 .uk-card {
     border-radius: 10px;
