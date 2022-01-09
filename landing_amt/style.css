@@ -52,10 +52,19 @@ a:hover {
 }
 .slide_2 {
     width: auto;
-    height: 350px;
-    block-size: 350px;
+    min-height: 350px;
+    min-block-size: 350px;
+    max-height: 350px;
+    max-block-size: 350px;
     inline-size: auto;
-    margin: 20px;
+}
+.flex_plug{
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+.uk-card-body h3 {
+    align-items: flex-start;
 }
 .uk-text-small {
     color: #fff!important;
@@ -83,6 +92,9 @@ a:hover {
 }
 .uk-card {
     border-radius: 10px;
+}
+.uk-label-site {
+    left: inherit;
 }
 .uk-label-danger {
     background-color: #f0506e!important;
@@ -136,3 +148,21 @@ a:hover {
     }
 }
 /* Animation Scroll End */
+
+@media screen and (max-width: 990px) {
+    #amtMenu {
+        display: none;
+    }
+    .img_main {
+        display: none;
+    }
+    .name_site {
+        text-align: center;
+    }
+    .buttons {
+        display: block;
+    }
+    .buttons div {
+        margin: 20px;
+    }
+}
