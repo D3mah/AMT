@@ -23,7 +23,7 @@
         <!--    2    -->
         <div class="section">
             <div class="uk-container">
-                <div uk-slider="autoplay:false; autoplay-interval:10000; pause-on-hover:true;" style="margin-block-end: 15px; margin-right: 15px;">
+                <div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-block-end: 15px; margin-right: 15px;">
                     <h2 class="uk-heading-medium all_text" style="text-align: center;"><?php echo get_cat_name(3);?></h2>
                     <ul class="uk-slider-items uk-child-width-1-3@xl uk-child-width-1-2@m uk-child-width-1-1@s uk-grid">
                         <?php global $query_string; // параметры базового запроса
@@ -173,7 +173,7 @@
                         <ul class="uk-slider-items uk-child-width-1-3@xl uk-child-width-1-2@m uk-child-width-1-1@s uk-grid">
                             <?php query_posts('&cat=1&order=DESC'); // базовый запрос + свои параметры
                             if (have_posts()) : while (have_posts()) : the_post(); ?>
-                                <li>
+                                <li class="">
                                     <div class="uk-card uk-card-primary uk-card-hover">
                                         <div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
                                         <div class="uk-card-body cardtheme">

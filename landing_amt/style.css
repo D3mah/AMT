@@ -165,4 +165,7 @@ a:hover {
     .buttons div {
         margin: 20px;
     }
+    .uk-grid>* {
+        padding-left: 0px;
+    }
 }
