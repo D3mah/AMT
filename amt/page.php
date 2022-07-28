@@ -32,6 +32,13 @@
 		<!-- End uk-container -->
 	</div>
 	<!-- End c-icon uk-section -->
+
+	<!--  Start second_information_amt -->
+        <div class="uk-container">
+            <?php dynamic_sidebar('second_information_amt'); ?>
+        </div>
+    <!--  End second_information_amt -->
+
 	<!-- Start page -->
 	<div class="page">
 		<!-- Start uk-container -->

@@ -61,7 +61,9 @@
         <!-- End mobile-c-icon -->
 
         <!--  Start second_information_amt -->
+        <div class="uk-container">
             <?php dynamic_sidebar('second_information_amt'); ?>
+        </div>
         <!--  End second_information_amt -->
 
 		<!-- Start content uk-container -->

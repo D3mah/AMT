@@ -1,4 +1,9 @@
 <?php get_header() ; ?>
+<!--  Start second_information_amt -->
+    <div class="uk-container">
+        <?php dynamic_sidebar('second_information_amt'); ?>
+    </div>
+<!--  End second_information_amt -->
 <!-- Start uk-container -->
 <div class="uk-container">
 	<!-- Start uk-section -->

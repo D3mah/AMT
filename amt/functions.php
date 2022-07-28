@@ -59,7 +59,7 @@ function sidebars() {
 		'name'          => 'Дополнительный информационный блок над блоком "Важная информация',
 		'id'            => "second_information_amt",
 		'description'   => 'Дополнительный блок для важной информации на сайте, располагается над блоком "Важная информация" ',
-		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section"><div class="uk-card">',
+		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section" style="padding-top: 0px;"><div class="uk-card">',
 		'after_widget'  => '</div></div></div></div>',
 		'before_title'  => '<div class="w-title imp-t">',
 		'after_title'   => '</div>'
