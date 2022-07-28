@@ -47,12 +47,12 @@
                         <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
                     </div>
                     <ul class="uk-slider-items uk-child-width-1-5@xl uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid uk-text-center">
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Комплексная безопасность</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Юридическая помощь</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Противодействие коррупции</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Воспитательная работа</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Методическая работа</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Инклюзивное образование</div></a></li>
+                        <li><a href="/security" class="uk-card uk-card-default uk-card-body u-card-s"><div>Комплексная безопасность</div></a></li>
+                        <li><a href="/juristic-help" class="uk-card uk-card-default uk-card-body u-card-s"><div>Юридическая помощь</div></a></li>
+                        <li><a href="/anticorruption" class="uk-card uk-card-default uk-card-body u-card-s"><div>Противодействие коррупции</div></a></li>
+                        <li><a href="/edu-work" class="uk-card uk-card-default uk-card-body u-card-s"><div>Воспитательная работа</div></a></li>
+                        <li><a href="/metod-work" class="uk-card uk-card-default uk-card-body u-card-s"><div>Методическая работа</div></a></li>
+                        <li><a href="/inc" class="uk-card uk-card-default uk-card-body u-card-s"><div>Инклюзивное образование</div></a></li>
                     </ul>
                 </div>
             </div>
