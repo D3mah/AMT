@@ -68,7 +68,7 @@ function sidebars() {
 		'name'          => 'Важная информация',
 		'id'            => "imp",
 		'description'   => 'Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',
-		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section"><div class="uk-card">',
+		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section" style="padding-top: 0px;"><div class="uk-card">',
 		'after_widget'  => '</div></div></div></div>',
 		'before_title'  => '<div class="w-title imp-t">',
 		'after_title'   => '</div>'

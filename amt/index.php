@@ -78,7 +78,7 @@
                 <!-- Start uk-width-1-3@m -->
                 <div class="uk-width-1-3@m">
                     <!-- Start uk-section -->
-                    <div class="uk-section">
+                    <div class="uk-section" style="padding-top: 0px;">
                         <!-- Start uk-container -->
                         <div class="uk-container">
                             <!-- Start uk-slider -->
@@ -125,7 +125,7 @@
                 <!-- Start uk-width-1-3@m -->
                 <div class="uk-width-1-3@m">
                     <!-- Start uk-section -->
-                    <div class="uk-section">
+                    <div class="uk-section" style="padding-top: 0px;">
                         <div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
                             <h3 class="important"><?php echo get_cat_name(11) ?></h3>
                             <div class="uk-position-relative uk-light nav-slider">
@@ -163,7 +163,7 @@
                 <!-- End uk-width-1-3@m -->
                 <div class="uk-width-1-3@m">
                     <!-- Start uk-section -->
-                    <div class="uk-section">
+                    <div class="uk-section" style="padding-top: 0px;">
                         <div uk-slider="autoplay:true; autoplay-interval:5000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
                             <h3 class="important"><?php echo get_cat_name(12) ?></h3>
                             <div class="uk-position-relative uk-light nav-slider">
