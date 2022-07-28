@@ -5,7 +5,7 @@
         menu: '#amtMenu',
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['<?php echo get_cat_name(1); ?>', '<?php echo get_cat_name(3); ?>', '<?php echo get_cat_name(4); ?>', '<?php echo get_cat_name(5); ?>' ,'Рекомендуемые плагины', 'Установка', 'Новости' ,'Вопросы'],
+        navigationTooltips: ['<?php echo get_cat_name(1); ?>', '<?php echo get_cat_name(3); ?>', '<?php echo get_cat_name(4); ?>', '<?php echo get_cat_name(5); ?>' ,'<?php echo get_cat_name(6); ?>', 'Установка', '<?php echo get_cat_name(1); ?>' ,'Вопросы'],
         showActiveTooltip: false,
         slidesNavigation: false,
         slidesNavPosition: 'bottom',

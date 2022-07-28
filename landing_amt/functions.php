@@ -56,34 +56,34 @@ function sidebars(){
         'after_title'   => null
     ));
     register_sidebar( array(
-        'name'          => 'Третий слайд',
+        'name'          => 'Третий слайд [Временно отключен]',
         'id'            => "3_slide",
-        'description'   => '3 Слайд',
+        'description'   => '3 Слайд [Временно отключен]',
         'before_widget' => null,
         'after_widget'  => null,
         'before_title'  => null,
         'after_title'   => null
     ));
     register_sidebar( array(
-        'name'          => 'Четвертый слайд',
+        'name'          => 'Четвертый слайд [Временно отключен]',
         'id'            => "4_slide",
-        'description'   => '4 Слайд',
+        'description'   => '4 Слайд [Временно отключен]',
         'before_widget' => null,
         'after_widget'  => null,
         'before_title'  => null,
         'after_title'   => null
     ));
     register_sidebar( array(
-        'name'          => 'Пятый слайд',
+        'name'          => 'Пятый слайд [Временно отключен]',
         'id'            => "5_slide",
-        'description'   => '5 Слайд',
+        'description'   => '5 Слайд [Временно отключен]',
         'before_widget' => null,
         'after_widget'  => null,
         'before_title'  => null,
         'after_title'   => null
     ));
     register_sidebar( array(
-        'name'          => 'Первый слайд',
+        'name'          => 'Шестой слайд',
         'id'            => "6_slide",
         'description'   => '6 Слайд',
         'before_widget' => null,
