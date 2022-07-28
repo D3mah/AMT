@@ -47,12 +47,12 @@
                         <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
                     </div>
                     <ul class="uk-slider-items uk-child-width-1-5@xl uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid uk-text-center">
-                        <li><a href="/security" class="uk-card uk-card-default uk-card-body u-card-s"><div>Комплексная безопасность</div></a></li>
-                        <li><a href="/juristic-help" class="uk-card uk-card-default uk-card-body u-card-s"><div>Юридическая помощь</div></a></li>
-                        <li><a href="/anticorruption" class="uk-card uk-card-default uk-card-body u-card-s"><div>Противодействие коррупции</div></a></li>
-                        <li><a href="/edu-work" class="uk-card uk-card-default uk-card-body u-card-s"><div>Воспитательная работа</div></a></li>
-                        <li><a href="/metod-work" class="uk-card uk-card-default uk-card-body u-card-s"><div>Методическая работа</div></a></li>
-                        <li><a href="/inc" class="uk-card uk-card-default uk-card-body u-card-s"><div>Инклюзивное образование</div></a></li>
+                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Комплексная безопасность</div></a></li>
+                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Юридическая помощь</div></a></li>
+                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Противодействие коррупции</div></a></li>
+                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Воспитательная работа</div></a></li>
+                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Методическая работа</div></a></li>
+                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Инклюзивное образование</div></a></li>
                     </ul>
                 </div>
             </div>
@@ -60,15 +60,36 @@
         </div>
         <!-- End mobile-c-icon -->
 
-        <!--  Start second_information_amt -->
-        <div class="uk-container">
-            <?php dynamic_sidebar('second_information_amt'); ?>
-        </div>
-        <!--  End second_information_amt -->
-
 		<!-- Start content uk-container -->
 
 		<div class="uk-container">
+            <!-- Start uk-slider -->
+            <div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" class="amt-history" style="margin-bottom: 15px; margin-block-end: 15px;">
+                <h3 class="important">Истории <span class="uk-label uk-label-danger">Новое</span></h3>
+                <div class="uk-position-relative uk-light nav-slider">
+                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+                </div>
+                <ul class="uk-slider-items uk-child-width-1-2@m uk-child-width-1-1@s uk-grid">
+
+                    <?php $query = new WP_Query( array ('post_type' => 'stories', 'posts_per_page' => 12) ); ?>
+                    <?php if ( $query->have_posts() ) : ?>
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                            <li>
+                                <?php { ?>
+                                    <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="-1">
+                                        <?php the_content('Полностью') ?>
+                                    </div>
+                                <?php } ?>
+                            </li>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php else : ?>
+                        <p>Истории скоро появятся</p>
+                    <?php endif; ?>
+                </ul>
+            </div>
+            <!-- End uk-slider -->
 			<?php dynamic_sidebar('imp'); ?>
 
 			<!-- Start uk-grid -->
@@ -78,7 +99,7 @@
                 <!-- Start uk-width-1-3@m -->
                 <div class="uk-width-1-3@m">
                     <!-- Start uk-section -->
-                    <div class="uk-section" style="padding-top: 0px;">
+                    <div class="uk-section">
                         <!-- Start uk-container -->
                         <div class="uk-container">
                             <!-- Start uk-slider -->
@@ -125,7 +146,7 @@
                 <!-- Start uk-width-1-3@m -->
                 <div class="uk-width-1-3@m">
                     <!-- Start uk-section -->
-                    <div class="uk-section" style="padding-top: 0px;">
+                    <div class="uk-section">
                         <div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
                             <h3 class="important"><?php echo get_cat_name(11) ?></h3>
                             <div class="uk-position-relative uk-light nav-slider">
@@ -163,7 +184,7 @@
                 <!-- End uk-width-1-3@m -->
                 <div class="uk-width-1-3@m">
                     <!-- Start uk-section -->
-                    <div class="uk-section" style="padding-top: 0px;">
+                    <div class="uk-section">
                         <div uk-slider="autoplay:true; autoplay-interval:5000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
                             <h3 class="important"><?php echo get_cat_name(12) ?></h3>
                             <div class="uk-position-relative uk-light nav-slider">

@@ -1,4 +1,9 @@
 <?php get_header() ; ?>
+<!--  Start second_information_amt -->
+    <div class="uk-container">
+        <?php dynamic_sidebar('second_information_amt'); ?>
+    </div>
+<!--  End second_information_amt -->
 <!-- Start uk-container -->
 <div class="uk-container">
 	<!-- Start uk-section -->
@@ -9,7 +14,7 @@
 		 <h2>Страница не найдена</h2>
 		 <p>Страница, на которую Вы хотели перейти, не найдена. Возможно, введен некорректный адрес или страница была удалена</p>
 		 	<div class="link-404">
-			 <a href="<?php echo get_home_url(); ?>">На главную</a>
+			 <a href="<?php echo get_home_url(); ?>">На главную!</a>
 			</div>
 		</div>
 		<!-- End page-404 -->

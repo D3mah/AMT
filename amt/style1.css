@@ -3,8 +3,8 @@ Theme Name: AMT
 Theme URI: vk.com/d3ma_k
 Author: Dmitriy Kolmakov
 Author URI: vk.com/d3ma_k
-Description: Шаблон для образовательных сайтов. Последнее обновление 28.07.2022. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
-Version: 2.97
+Description: Шаблон для образовательных сайтов. Последнее обновление 30.03.2022. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
+Version: 2.92
 License: GNU General Public License v2 or later
 License URI: www.gnu.org/licenses/gpl-2.0.html
 Tags: amt, edu
@@ -375,7 +375,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	margin-block-end: 20px!important;
 	margin-bottom: 20px!important;
 }
-.c-icon a, .mobile-c-icon a {
+.c-icon a {
 	text-transform: uppercase;
 	font-weight: bold;
 	text-decoration: none;
@@ -385,7 +385,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	padding: 30px 20px;
 	overflow:hidden;
 }
-.c-icon a:after, .mobile-c-icon a:after {
+.c-icon a:after {
 	font-family: FontAwesome;
 	content:"\f061";
 	position: absolute;
@@ -395,16 +395,18 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	font-size: 18px;
 	color: var(--text-menu);
 }
-.c-icon a:hover:after, .mobile-c-icon ul a:hover:after {
+.c-icon a:hover:after {
 	right: 25px;
 }
-.c-icon a div, .mobile-c-icon ul a div {
+.c-icon a div {
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	inline-size: 100%;
 }
+.c-icon .current_page_item a {
 
+}
 .u-card-s:hover , .u-card-s:focus {
 	background-color: var(--switch-menu);
 }
@@ -541,7 +543,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--text);
 } */
 .uk-card svg {
-	/* color: var(--news-plus); */
+	color: var(--news-plus)!important;
 }
 .uk-position-small:hover svg {
 	color: var(--button-slider)!important;
@@ -564,7 +566,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 /*.uk-light .uk-slidenav:hover, .uk-light .uk-slidenav:focus, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:hover, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav:focus, .uk-card-primary.uk-card-body .uk-slidenav:hover, .uk-card-primary.uk-card-body .uk-slidenav:focus, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:hover, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav:focus, .uk-card-secondary.uk-card-body .uk-slidenav:hover, .uk-card-secondary.uk-card-body .uk-slidenav:focus, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:hover, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav:focus, .uk-overlay-primary .uk-slidenav:hover, .uk-overlay-primary .uk-slidenav:focus, .uk-offcanvas-bar .uk-slidenav:hover, .uk-offcanvas-bar .uk-slidenav:focus {*/
 /*	color: var(--nav-slider)!important;*/
 /*}*/
-.c-icon, .mobile-c-icon {
+.c-icon {
 	padding-block-start: 40px;
 	padding-top: 40px;
 	padding-block-end: 0px;
@@ -595,8 +597,6 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 .uk-card-media-left .uk-cover {
 	width: 100%;
 	inline-size:100%;
-	height: 400px;
-	block-size: 400px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -913,16 +913,8 @@ footer .current_page_item {
 	color: var(--text)!important;
 }
 .lgx-logo-img {
-	block-size: 150px!important;
-	height: 150px!important;
-	width: 100%!important;
-	inline-size: 100!important;
-}
-.lgx-logo-slider-wp .lgx-logo-wrapper .lgx-logo-carousel .owl-next img, .lgx-logo-slider-wp .lgx-logo-wrapper .lgx-logo-carousel .owl-prev img {
-	width: 30px;
-	height: 30px;
-	block-size: 30px;
-	inline-size: 30px;
+	min-block-size: 150px;
+	min-height: 150px;
 }
 .widget_recent_entries ul {
 	list-style: none;
@@ -1021,7 +1013,7 @@ span.post-date {
 }
 .post-l {
 	background-color: var(--block);
-	border-radius: 0px 0px 10px 10px;
+
 }
 .h-target {
 	display: none;
@@ -1069,14 +1061,10 @@ span.post-date {
 	color: var(--text-menu);
 	text-transform: uppercase;
 	font-family: 'Roboto Condensed Bold', sans-serif;
+	position: absolute;
     z-index: inherit;
-	/* position: absolute;
     bottom: 50px;
-    left: 30px; */
-	display: flex;
-	align-items: center;
-	margin: 0px 15px 0px 15px;
-	
+    left: 30px;
 }
 .bg-color {
 	background-color: transparent;
@@ -1611,9 +1599,6 @@ html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .uk-slider 
 	.mobile-menu {
 		display: none;
 		}
-	 .mobile-c-icon {
-		 display: none;
-	 }
   }
  @media (max-width: 959px) {
 	.topmenu {
@@ -1645,12 +1630,6 @@ html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .uk-slider 
 		.print {
 			display: none;
 		}
-		.c-icon {
-			display: none;
-		}
-		.amt-history {
-			display: none;
-		}
  }
  @media (max-width: 780px) {
 	.name {
@@ -1665,11 +1644,6 @@ html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .uk-slider 
 		display: flex;
 	}
  }
-  @media (min-width: 639px) {
-	  .eye_bvi_mobile {
-		  display: none;
-	  }
-  }
  @media (max-width: 639px) {
 	.uk-cover-container > .uk-card-badge {
 		position: absolute;
@@ -1679,19 +1653,6 @@ html body .bvi-body[data-bvi-letterspacing="normal"] :not(.bvi-link) .uk-slider 
 	}
 	.link-m {
 		display: none;
-	}
-	.uk-card-media-left {
-		border-radius: 10px 10px 0px 0px;
-	}
-	.backsite {
-		border-radius: 10px 10px 0px 0px;
-	}
-	.eye_bvi_full {
-		display: none;
-	}
-	.eye_bvi_mobile .bvi-shortcode .bvi-svg-eye{
-		margin-right: 0px;
-		margin-inline-end: 0px;
 	}
  }
  @media (max-width: 510px) {

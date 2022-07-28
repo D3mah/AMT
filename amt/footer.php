@@ -43,7 +43,7 @@
 <div class="copyright">
 	<!-- Start uk-container -->
 	<div class="uk-container">
-		&copy;<?php echo the_date( '2021', '', '', '' ); ?> <?php bloginfo( 'description' ); ?>
+		&copy;<?php echo the_date( 'Y', '', '', '' ); ?> <?php bloginfo( 'description' ); ?>
 	</div>
 	<!-- End uk-container -->
 </div>
