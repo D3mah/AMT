@@ -63,6 +63,33 @@
 		<!-- Start content uk-container -->
 
 		<div class="uk-container">
+            <!-- Start uk-slider -->
+            <div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" class="amt-history" style="margin-bottom: 15px; margin-block-end: 15px;">
+                <h3 class="important">Истории <span class="uk-label uk-label-danger">Новое</span></h3>
+                <div class="uk-position-relative uk-light nav-slider">
+                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+                </div>
+                <ul class="uk-slider-items uk-child-width-1-2@m uk-child-width-1-1@s uk-grid">
+
+                    <?php $query = new WP_Query( array ('post_type' => 'stories', 'posts_per_page' => 12) ); ?>
+                    <?php if ( $query->have_posts() ) : ?>
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                            <li>
+                                <?php { ?>
+                                    <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="-1">
+                                        <?php the_content('Полностью') ?>
+                                    </div>
+                                <?php } ?>
+                            </li>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php else : ?>
+                        <p>Истории скоро появятся</p>
+                    <?php endif; ?>
+                </ul>
+            </div>
+            <!-- End uk-slider -->
 			<?php dynamic_sidebar('imp'); ?>
 
 			<!-- Start uk-grid -->

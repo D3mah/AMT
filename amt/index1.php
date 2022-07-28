@@ -17,52 +17,73 @@
 			<!-- Start uk-container -->
 
 			<div class="uk-container">
-				<!-- Start uk-grid -->
-				<?php
-					wp_nav_menu( array (
-						'theme_location'  => 'b-slider',
-						'container'       => 'div',
-						'container_id' => null,
-						'container_class' => 'uk-child-width-1-3@m bottom-icon uk-text-center uk-grid',
-						'items_wrap'      => '%3$s',
-						'depth'           => 1,
-						'walker'        	=> new Amt_Walker
-						)
-					);
-						?>
-				<!-- End uk-grid -->
-			</div>
-			<!-- End uk-container -->
-		</div>
-		<!-- End c-icon uk-section -->
 
-        <!-- Start mobile-c-icon -->
-        <div class="mobile-c-icon">
-            <!--Start uk-container -->
-            <div class="uk-container">
-                <div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
-                    <h3 class="important">Важные разделы</h3>
-                    <div class="uk-position-relative uk-light nav-slider">
-                        <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
-                        <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
-                    </div>
-                    <ul class="uk-slider-items uk-child-width-1-5@xl uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid uk-text-center">
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Комплексная безопасность</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Юридическая помощь</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Противодействие коррупции</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Воспитательная работа</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Методическая работа</div></a></li>
-                        <li><a href="#" class="uk-card uk-card-default uk-card-body u-card-s"><div>Инклюзивное образование</div></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End uk-container -->
-        </div>
-        <!-- End mobile-c-icon -->
+				<!-- Start uk-grid -->
+
+				<?php 
+
+					wp_nav_menu( array (
+
+						'theme_location'  => 'b-slider',
+
+						'container'       => 'div',
+
+						'container_id' => null,
+
+						'container_class' => 'uk-child-width-1-3@m bottom-icon uk-text-center uk-grid',
+
+						'items_wrap'      => '%3$s',
+
+						'depth'           => 1,
+
+						'walker'        	=> new Amt_Walker
+
+						)
+
+					);
+
+						?>
+
+				<!-- End uk-grid -->
+
+			</div>
+
+			<!-- End uk-container -->
+
+		</div>
+
+		<!-- End c-icon uk-section -->
 
 		<!-- Start content uk-container -->
 
 		<div class="uk-container">
+            <!-- Start uk-slider -->
+            <div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+                <h3 class="important">Истории <span class="uk-label uk-label-danger">Новое</span></h3>
+                <div class="uk-position-relative uk-light nav-slider">
+                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+                </div>
+                <ul class="uk-slider-items uk-child-width-1-5@xl uk-child-width-1-5@l uk-child-width-1-4@m uk-child-width-1-2@s uk-grid">
+
+                    <?php $query = new WP_Query( array ('post_type' => 'stories', 'posts_per_page' => 12) ); ?>
+                    <?php if ( $query->have_posts() ) : ?>
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                            <li>
+                                <?php { ?>
+                                    <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="-1">
+                                        <?php the_content('Полностью') ?>
+                                    </div>
+                                <?php } ?>
+                            </li>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php else : ?>
+                        <p>Истории скоро появятся</p>
+                    <?php endif; ?>
+                </ul>
+            </div>
+            <!-- End uk-slider -->
 			<?php dynamic_sidebar('imp'); ?>
 
 			<!-- Start uk-grid -->

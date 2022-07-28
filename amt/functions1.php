@@ -37,7 +37,7 @@ function scripts() {
 function script() {
 	wp_enqueue_script ('uikit', get_template_directory_uri() .'/assets/js/uikit.min.js');
 	wp_enqueue_script ('uikit-icon', get_template_directory_uri() .'/assets/js/uikit-icons.min.js');
-	wp_enqueue_script ('fontawesome', get_template_directory_uri() .'/assets/js/fontawesome.js');
+	wp_enqueue_script ('fontawesome', 'https://kit.fontawesome.com/8cea7a5a56.js');
 	wp_enqueue_script ('clips', get_template_directory_uri() .'/assets/js/clipboard.min.js');
 	wp_enqueue_script ('script', get_template_directory_uri() .'/assets/js/script.js');
 }
@@ -68,7 +68,7 @@ function sidebars() {
 		'name'          => 'Важная информация',
 		'id'            => "imp",
 		'description'   => 'Блок важней информации на сайте. Отображается только на главной странице сайта. Если нет, экстренных объявлений, оставить блок пустым. Рекомендуемые виджеты: Текст / html редактор',
-		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section"><div class="uk-card">',
+		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section i-n"><div class="imp-n uk-card uk-card-hover">',
 		'after_widget'  => '</div></div></div></div>',
 		'before_title'  => '<div class="w-title imp-t">',
 		'after_title'   => '</div>'

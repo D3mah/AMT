@@ -29,9 +29,17 @@
         accurateTrackBounce:true
    });
 </script>
-<style>.ow-button-base a {min-block-size: 130px; display: flex!important; align-items: center; margin-block-end: 15px; justify-content: center;}</style>
 <noscript><div><img src="https://mc.yandex.ru/watch/50259871" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YH3PKTSRKZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YH3PKTSRKZ');
+</script>
 </head>
 <body class="theme">
 	<!-- Start full-page -->
@@ -42,14 +50,15 @@
 			<div class="uk-container">
 				<nav uk-navbar>
 					<div class="uk-navbar-left">
+
                             <ul class="uk-navbar-nav">
                                 <li>
                                     <a href="#" class="header_info">Информация</a>
                                     <div class="uk-navbar-dropdown">
                                         <ul class="uk-nav uk-navbar-dropdown-nav">
                                             <li class="uk-active"><a href="/important/information/">Информация о руководящем составе</a></li>
-                                            <li><a href="/helplines">Телефоны доверия</a></li>
-                                            <li><a href="/opros">Опросы</a></li>
+                                            <li><a href="/helplines/">Телефоны доверия</a></li>
+                                            <li><a href="/opros/">Опросы</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -59,8 +68,7 @@
 
 					</div>
 					<div class="uk-navbar-right">
-						<div class="eye_bvi_full" uk-tooltip="title: Версия для слабовидящих; pos: bottom"><?php echo do_shortcode( '[bvi text="Версия для слабовидящих"]' ); ?></div>
-						<div class="eye_bvi_mobile" uk-tooltip="title: Версия для слабовидящих; pos: bottom"><?php echo do_shortcode( '[bvi]' ); ?></div>
+						<?php echo do_shortcode( '[bvi text="Версия для слабовидящих"]' ); ?>
 						<div class="box-switch" uk-tooltip="title: Темная тема; pos: bottom"><div class="switch far fa-moon"></div></div>
 					</div>
 				</nav>
@@ -155,3 +163,58 @@
 					?>
 			</div>
 		</div>
+
+<!--        <div class="uk-grid-match" uk-grid="">-->
+<!--            <div class="uk-width-1-3@m uk-position-relative">-->
+<!--                <a href="/ped" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [Глав.корпус]</h3>-->
+<!--                    <div class="svg__teacher"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-3@m uk-position-relative">-->
+<!--                <a href="/ped-1" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [1 корпус]</h3>-->
+<!--                    <div class="svg__teacher"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-3@m uk-position-relative">-->
+<!--                <a href="/ped-2" class="uk-card-large uk-card-default uk-card-hover uk-card-body center">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Педагогическим работникам [2 корпус]</h3>-->
+<!--                    <div class="svg__teacher"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="/info" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Контактные данные отделов</h3>-->
+<!--                    <div class="svg__work"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="https://docs.google.com/spreadsheets/d/1WlQZwsXSm7KQJ1a23L6mBVUvKt9YQa1-0DMNCq609qc" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Планирование работы</h3>-->
+<!--                    <div class="svg__work"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="https://docs.google.com/spreadsheets/d/10N0oBgsKJX_dRzSWR3mB53pL22EwAO87K6xqZ9ELb6k" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">Хозяйственная часть</h3>-->
+<!--                    <div class="svg__house"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="uk-width-1-2@m uk-position-relative">-->
+<!--                <a href="/help" class="uk-card-large uk-card-default uk-card-hover uk-card-body">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">ИКТ обеспечение</h3>-->
+<!--                    <div class="svg__programmer"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!---->
+<!--        <div class="uk-grid-match" uk-grid="">-->
+<!--            <div class="uk-width-1-1 uk-position-relative">-->
+<!--                <a href="https://docs.google.com/spreadsheets/d/1WLU7w2J5a_e3teXLzzFd1u-DDGOLkbr6k3MmVqHyxiE/edit?usp=sharing" target="_blank" class="uk-card-large uk-card-default uk-card-hover uk-card-body center" rel="noopener">-->
+<!--                    <h3 class="uk-card-title uk-text-uppercase uk-text-center">COVID-табличка [кураторам]</h3>-->
+<!--                    <div class="svg__med"></div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
