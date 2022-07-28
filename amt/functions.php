@@ -56,9 +56,9 @@ function sidebars() {
 		'after_title'   => null
 	));
 	register_sidebar( array(
-		'name'          => 'Истории',
-		'id'            => "stories_amt",
-		'description'   => 'Истории на сайте',
+		'name'          => 'Дополнительный информационный блок над блоком "Важная информация',
+		'id'            => "second_information_amt",
+		'description'   => 'Дополнительный блок для важной информации на сайте, располагается над блоком "Важная информация" ',
 		'before_widget' => '<div uk-grid><div class="uk-width@m"><div class="uk-section"><div class="uk-card">',
 		'after_widget'  => '</div></div></div></div>',
 		'before_title'  => '<div class="w-title imp-t">',

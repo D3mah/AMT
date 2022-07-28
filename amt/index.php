@@ -60,6 +60,10 @@
         </div>
         <!-- End mobile-c-icon -->
 
+        <!--  Start second_information_amt -->
+            <?php dynamic_sidebar('second_information_amt'); ?>
+        <!--  End second_information_amt -->
+
 		<!-- Start content uk-container -->
 
 		<div class="uk-container">
