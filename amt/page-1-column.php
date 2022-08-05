@@ -90,7 +90,7 @@
 							</div>
 							<!-- End help-button -->
 							<!-- Start Test -->
-							<div class="uk-height-small uk-panel uk-flex" uk-parallax="bgx: -300" style="background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/wp-content/themes/amt/assets/img/page_image.png'); background-repeat: repeat;">
+                            <div class="uk-height-small uk-flex" uk-parallax="bgx: -250" style="background-image: url('/wp-content/themes/amt/assets/img/page_image.png')">
 								<h2 class="post-title"><?php the_title(); ?></h2>
 							</div>
 							<!-- End Test -->
