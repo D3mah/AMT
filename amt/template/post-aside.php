@@ -17,7 +17,9 @@
 							<div class="uk-grid-collapse uk-child-width-expand@m uk-text-center" uk-grid>
 								<div>
                                     <div class="backsite" uk-tooltip="Вернуться на предыдущую страницу">
-                                        <?php if( $return_url = wp_get_referer() ){ ?>
+                                        <?php
+                                        
+                                            if( $return_url = wp_get_referer() ){ ?>
                                             <a href="<?php echo esc_url( $return_url ); ?>" class="link-backsite"><div><span class="uk-margin-small-right" uk-icon="arrow-left"></span>Назад</div></a>
                                         <?php } else { ?>
                                             <a href="<?php echo home_url() ?>" class="link-backsite" uk-tooltip="Вернуться на главную страницу"><div><span class="uk-margin-small-right uk-icon" uk-icon="icon: home;"></span>Главная страница</div></a>
