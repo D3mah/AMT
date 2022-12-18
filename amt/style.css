@@ -3,8 +3,8 @@ Theme Name: AMT
 Theme URI: vk.com/d3ma_k
 Author: Dmitriy Kolmakov
 Author URI: vk.com/d3ma_k
-Description: Шаблон для образовательных сайтов. Последнее обновление 28.07.2022. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
-Version: 2.975
+Description: Шаблон для образовательных сайтов. Последнее обновление 18.12.2022. В шаблоне реализованы две цветовые темы "Темная" и "Светлая". Поддержка темы: Wordpress 5.0+ PHP 7.0+. Поддерживается во всех современных браузерах, поддерживающих flex элементы (нет поддержки на IE 11)
+Version: 0.975
 License: GNU General Public License v2 or later
 License URI: www.gnu.org/licenses/gpl-2.0.html
 Tags: amt, edu
@@ -78,6 +78,8 @@ body {
 	--text-news-hover: #c78282;
 	--news-footer: #27272d;
 	--news-body: #43424b;
+	--news-body-importants: #545151; /*  new */
+	--news-body-newspappers: #666870; /*  new */
 	--date-news: #39f;
 	--button-news:#39f;
 	--button-news-hover: #1b4f84;
@@ -150,6 +152,8 @@ body {
 	--text-news-hover: #c78282;
 	--news-footer: #009ee0;
 	--news-body: #fbfbfb;
+	--news-body-importants: #ffdcdc; /*  new */
+	--news-body-newspappers: #afe1ff ; /*  new */
 	--date-news: #009ee0;
 	--button-news: #1e87f0;
 	--button-news-hover: #057fb3;
@@ -410,12 +414,30 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 }
 .cardtheme {
 	background-color: var(--news-body);
-	block-size: 140px;
-	height: 140px;
-	max-block-size: 140px;
-	max-height: 140px;
-	min-block-size: 140px;
-	min-height: 140px;
+	block-size: 150px;
+	height: 150px;
+	overflow-y: auto;
+	transition: 0.3s ease;
+	padding: 30px 25px;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+}
+.cardtheme_importants {
+	background-color: var(--news-body-importants);
+	block-size: 150px;
+	height: 150px;
+	overflow-y: auto;
+	transition: 0.3s ease;
+	padding: 30px 25px;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+}
+.cardtheme_newspappers {
+	background-color: var(--news-body-newspappers);
+	block-size: 150px;
+	height: 150px;
 	overflow-y: auto;
 	transition: 0.3s ease;
 	padding: 30px 25px;
@@ -498,6 +520,14 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 	color: var(--hover)!important;
 }
 .a-imp-news:hover, .cardtheme:hover {
+	text-decoration: none;
+	background-color:var(--imp-news);
+}
+.a-imp-news:hover, .cardtheme_importants:hover {
+	text-decoration: none;
+	background-color:var(--imp-news);
+}
+.a-imp-news:hover, .cardtheme_newspappers:hover {
 	text-decoration: none;
 	background-color:var(--imp-news);
 }
@@ -1319,6 +1349,9 @@ span.post-date {
 /* .uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
 	padding: 0px 0px 0px 15px;
 } */
+.uk-navbar-nav>li>a {
+	padding: 0px 15px 0px 15px;
+} 
 .dataTables_filter label #text {
 display: none;
 }

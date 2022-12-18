@@ -72,8 +72,10 @@
 			<?php dynamic_sidebar('imp'); ?>
 
 			<!-- Start uk-grid -->
+
 			<div uk-grid>
-                <!-- Start uk-width-2-3@m -->
+
+                <!-- Start uk-width-1-2@m -->
                 <div class="uk-width-2-3@m">
                     <!-- Start uk-section -->
                     <div class="uk-section" style="padding-top: 0px;">
@@ -81,12 +83,12 @@
                         <div class="uk-container">
                             <!-- Start uk-slider -->
                             <div uk-slider="autoplay:true; autoplay-interval:7000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
-                                <a href="<?php echo get_category_link( 4 ) ?>" class="uk-card-title"><h3 class="important"><?php echo get_cat_name(4) ?></h3></a>
+                                <h3 class="important"><?php echo get_cat_name(4) ?></h3>
                                 <div class="uk-position-relative uk-light nav-slider">
                                     <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
                                     <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
                                 </div>
-                                <ul class="uk-slider-items uk-child-width-1-2@m uk-grid">
+                                <ul class="uk-slider-items uk-child-width-1-1@m uk-grid">
                                     <?php
                                     query_posts('&cat=4&order=DESC'); // базовый запрос + свои параметры
                                     if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -94,7 +96,7 @@
                                             <a href="<?php the_permalink(); ?>" class="a-imp-news">
                                                 <div class="uk-card uk-card-default uk-card-hover">
                                                     <div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
-                                                    <div class="uk-card-body cardtheme_importants">
+                                                    <div class="uk-card-body cardtheme">
                                                         <h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
                                                         <!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
                                                     </div>
@@ -111,20 +113,21 @@
                                 </ul>
                             </div>
                             <!-- End uk-slider -->
+                            <a href="<?php echo get_category_link( 4 ) ?>" class="no_dec"><div class="all_info">Все Объявления</div></a>
                         </div>
                         <!-- End uk-container -->
                     </div>
                     <!-- End uk-section -->
                 </div>
 
-                <!-- End uk-width-2-3@m -->
+                <!-- End uk-width-1-2@m -->
 
                 <!-- Start uk-width-1-3@m -->
                 <div class="uk-width-1-3@m">
                     <!-- Start uk-section -->
                     <div class="uk-section" style="padding-top: 0px;">
                         <div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
-                            <a href="<?php echo get_category_link(11) ?>" class="uk-card-title"><h3 class="important"><?php echo get_cat_name(11) ?></h3></a>
+                            <h3 class="important"><?php echo get_cat_name(11) ?></h3>
                             <div class="uk-position-relative uk-light nav-slider">
                                 <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
                                 <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
@@ -137,7 +140,7 @@
                                         <a href="<?php the_permalink(); ?>" class="a-imp-news">
                                             <div class="uk-card uk-card-default uk-card-hover">
                                                 <div class="uk-card-badge uk-label uk-label-site"><?php echo get_the_date(); ?></div>
-                                                <div class="uk-card-body cardtheme_newspappers">
+                                                <div class="uk-card-body cardtheme">
                                                     <h3 class="uk-card-title title-n"><?php the_title(); ?></h3>
                                                     <!-- <?php echo kama_excerpt( array('maxchar'=>80) ); ?> -->
                                                 </div>
@@ -153,130 +156,11 @@
                                 <?php endif; ?>
                             </ul>
                         </div>
+                        <a href="<?php echo get_category_link(11) ?>" class="no_dec"><div class="all_info" style="margin-bottom: 70px; margin-block-end: 70px;">Все номера газет</div></a>
                     </div>
                     <!-- End uk-section -->
                 </div>
                 <!-- End uk-width-1-3@m -->
-
-                <!-- Start uk-width-1-1@m -->
-                <div class="uk-width-1-1@m">
-                    <!-- Start uk-section -->
-
-                    <div class="uk-section" style="padding-top: 0px!important; padding-block-start: 0px!important;">
-
-                        <!-- Start uk-container -->
-
-                        <div class="uk-container">
-
-                            <div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
-
-                                <a href="/photo" class="uk-card-title"><h3 class="l-news">Фотогалерея</h3></a>
-
-                                <div class="uk-position-relative uk-light nav-slider">
-
-                                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
-
-                                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
-
-                                </div>
-
-                                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-
-                                    <ul class="uk-slider-items uk-child-width-1-3@xl uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1-1@s uk-grid">
-
-                                        <?php $query = new WP_Query( array ('post_type' => 'photo', 'posts_per_page' => 6) ); ?>
-
-                                        <?php if ( $query->have_posts() ) : ?>
-
-                                            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-
-                                                <li>
-
-                                                    <div class="uk-card-badge uk-label uk-label-site" uk-tooltip="title: Дата поста; pos: top" title="" aria-expanded="false"><?php echo get_the_date(); ?></div>
-
-                                                    <div class="uk-card uk-card-default uk-card-hover b-news">
-
-                                                        <?php if (has_post_thumbnail()) { ?>
-
-                                                            <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
-
-                                                                <a href="<?php the_permalink(); ?>">
-
-                                                                    <img class="uk-transition-scale-up uk-transition-opaque" src="<?php echo get_the_post_thumbnail_url( '' , array(200, 300)); ?>" alt="">
-
-                                                                    <div class="uk-position-center">
-
-                                                                        <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
-
-                                                                    </div>
-
-                                                                </a>
-
-                                                            </div>
-
-                                                            <div class="uk-card-body p-album">
-
-                                                                <h4 class="uk-card-title photoalbum-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-
-                                                            </div>
-
-                                                        <?php } else { ?>
-
-                                                            <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
-
-                                                                <a href="<?php the_permalink(); ?>">
-
-                                                                    <img class="uk-transition-scale-up uk-transition-opaque" src="/wp-content/themes/amt/assets/img/no_photo.png" alt="">
-
-                                                                    <div class="uk-position-center">
-
-                                                                        <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
-
-                                                                    </div>
-
-                                                                </a>
-
-                                                            </div>
-
-                                                            <div class="uk-card-body body-text p-album">
-
-                                                                <h4 class="uk-card-title photoalbum-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-
-                                                            </div>
-
-                                                            </a>
-
-                                                        <?php } ?>
-
-                                                    </div>
-
-                                                </li>
-
-                                            <?php endwhile; ?>
-
-                                            <?php wp_reset_postdata(); ?>
-
-                                        <?php else : ?>
-
-                                            <p>Фотоальбомов еще нет</p>
-
-                                        <?php endif; ?>
-
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- End uk-container -->
-
-                    </div>
-
-                    <!-- End uk-section -->
-                </div>
-                <!-- End uk-width-1-1@m -->
 
 				<!-- Start uk-width-2-3@m -->
 
@@ -391,7 +275,127 @@
 
 				<!-- End uk-width-expand@m -->
 
+                <!-- Start uk-width-1-1 -->
+                <div class="uk-width-1-1">
+                    <!-- Start uk-section -->
 
+                    <div class="uk-section">
+
+                        <!-- Start uk-container -->
+
+                        <div class="uk-container">
+
+                            <div uk-slider="autoplay:true; autoplay-interval:10000; pause-on-hover:true;" style="margin-bottom: 15px; margin-block-end: 15px;">
+
+                                <h3 class="l-news">Фотогалерея</h3>
+
+                                <div class="uk-position-relative uk-light nav-slider">
+
+                                    <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" uk-tooltip="title: Назад; pos: top"></a>
+
+                                    <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" uk-tooltip="title: Вперед; pos: top"></a>
+
+                                </div>
+
+                                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+                                    <ul class="uk-slider-items uk-child-width-1-3@xl uk-child-width-1-3@l uk-child-width-1-2@m uk-child-width-1-1@s uk-grid">
+
+                                        <?php $query = new WP_Query( array ('post_type' => 'photo', 'posts_per_page' => 6) ); ?>
+
+                                        <?php if ( $query->have_posts() ) : ?>
+
+                                            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+                                                <li>
+
+                                                    <div class="uk-card-badge uk-label uk-label-site" uk-tooltip="title: Дата поста; pos: top" title="" aria-expanded="false"><?php echo get_the_date(); ?></div>
+
+                                                    <div class="uk-card uk-card-default uk-card-hover b-news">
+
+                                                        <?php if (has_post_thumbnail()) { ?>
+
+                                                            <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+
+                                                                <a href="<?php the_permalink(); ?>">
+
+                                                                    <img class="uk-transition-scale-up uk-transition-opaque" src="<?php echo get_the_post_thumbnail_url( '' , array(200, 300)); ?>" alt="">
+
+                                                                    <div class="uk-position-center">
+
+                                                                        <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+
+                                                                    </div>
+
+                                                                </a>
+
+                                                            </div>
+
+                                                            <div class="uk-card-body p-album">
+
+                                                                <h4 class="uk-card-title photoalbum-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+                                                            </div>
+
+                                                        <?php } else { ?>
+
+                                                            <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+
+                                                                <a href="<?php the_permalink(); ?>">
+
+                                                                    <img class="uk-transition-scale-up uk-transition-opaque" src="/wp-content/themes/amt/assets/img/no_photo.png" alt="">
+
+                                                                    <div class="uk-position-center">
+
+                                                                        <span class="uk-transition-fade" uk-icon="icon: plus; ratio: 2"></span>
+
+                                                                    </div>
+
+                                                                </a>
+
+                                                            </div>
+
+                                                            <div class="uk-card-body body-text p-album">
+
+                                                                <h4 class="uk-card-title photoalbum-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+                                                            </div>
+
+                                                            </a>
+
+                                                        <?php } ?>
+
+                                                    </div>
+
+                                                </li>
+
+                                            <?php endwhile; ?>
+
+                                            <?php wp_reset_postdata(); ?>
+
+                                        <?php else : ?>
+
+                                            <p>Фотоальбомов еще нет</p>
+
+                                        <?php endif; ?>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                            <a href="/photo" class="no_dec"><div class="all_info">Все Фотоальбомы</div></a>
+
+                        </div>
+
+                        <!-- End uk-container -->
+
+                    </div>
+
+                    <!-- End uk-section -->
+                </div>
+                <!-- End uk-width-1-1 -->
 
 			</div>
 
