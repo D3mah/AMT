@@ -305,6 +305,7 @@ a:hover, .uk-link:hover, .uk-link-toggle:hover .uk-link, .uk-link-toggle:focus .
 /* Start menu */
 .menu {
 	background-color: var(--menu);
+	z-index: 1000;
 }
 .topmenu ul li a {
 	display: block;

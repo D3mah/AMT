@@ -19,14 +19,13 @@ function support() {
 
 
 function styles() {
-    wp_enqueue_style ('uikit', get_template_directory_uri() .'/assets/css/uikit.min.css');
-    wp_enqueue_style ('fonts', get_template_directory_uri() .'/assets/css/fonts.css');
-    wp_enqueue_style ('fonts', get_template_directory_uri() .'/assets/css/fonts.css');
+    wp_enqueue_style ('semanticcss', get_template_directory_uri() .'/assets/semantic.min.css');
+//    wp_enqueue_style ('fonts', get_template_directory_uri() .'/assets/css/fonts.css');
     wp_enqueue_style ('style', get_stylesheet_uri() );
 }
 function scripts() {
-    wp_enqueue_script ('uikit', get_template_directory_uri() .'/assets/js/uikit.min.js');
-    wp_enqueue_script ('uikit-icon', get_template_directory_uri() .'/assets/js/uikit-icons.min.js');
+    wp_enqueue_script ('jquery', 'https://code.jquery.com/jquery-3.1.1.min.js');
+    wp_enqueue_script ('semanticjs', get_template_directory_uri() .'/assets/semantic.min.js');
     wp_enqueue_script ('fontawesome', 'https://kit.fontawesome.com/8cea7a5a56.js');
     wp_enqueue_script ('script', get_template_directory_uri() .'/assets/js/script.js');
 }
